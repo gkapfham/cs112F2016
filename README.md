@@ -11,7 +11,7 @@ College](http://www.allegheny.edu), the course has the following description:
 > analytical and experimental evaluation of algorithm performance, and object-oriented design and implementation
 > techniques. Topics include stacks, queues, deques, lists, strings, trees and graphs, dictionaries, recursion,
 > searching and sorting algorithms, and an introduction to program verification. One laboratory per week. Prerequisite:
-> Computer Science 111 or permission of the instructor. Distribution Requirements: QR, SP.\@ \\
+> Computer Science 111 or permission of the instructor. Distribution Requirements: QR, SP.
 
 The source code of the LaTeX documents uses a custom LaTeX style file and several other packages that are normally
 standard with a modern LaTeX distribution such a TeXLive 2015. All of the slides are programmed with the

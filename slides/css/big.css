@@ -1,0 +1,71 @@
+body {
+  font-family: 'Helvetica';
+  letter-spacing:-5px;
+  /* background:#000; */
+  background:#1d1f21 no-repeat center center fixed; 
+  background-size:100%;
+  color:#fff;
+  margin:0;
+  padding:0;
+  font-weight:bold;
+  background-repeat:no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* BODY { background: url(bgimage.gif); background-repeat: no-repeat } */
+
+/* background: url(images/bg.jpg) no-repeat center center fixed; */
+/*         -webkit-background-size: cover; */
+/*         -moz-background-size: cover; */
+/*         -o-background-size: cover; */
+/*         background-size: cover; */
+
+h1, h2, h3, p {
+  margin:0;
+}
+
+em, a {
+  font-style:normal;
+  color:#ce5c00;
+}
+
+em.orange {
+  color:#ce5c00;
+}
+
+em.plum {
+  color:#ad7fa8; 
+}
+
+em.green {
+ color:#8dbd0c;
+}
+
+em.scarlet {
+	color:#cc0000;
+}
+
+em.sky {
+	color:#3465a4;
+}
+
+a {
+  background: #34d0e7;
+  color:#000;
+  text-decoration:none;
+}
+
+img {
+  width:100%;
+}
+
+div {
+  cursor:pointer;
+  cursor:hand;
+  position:absolute;
+  top:0;
+  left:0;
+}

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Computer Science 112: Introduction to Computer Science II</title>
+
+    <meta name="description" content="Teaching Slides for Computer Science 112">
+    <meta name="author" content="Gregory M. Kapfhammer">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/night-gkapfham.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <!-- <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/tomorrow&#45;night&#45;bright.css">         -->
+    <!-- <link rel="stylesheet" href="lib/css/tomorrow&#45;night&#45;bright.css"> -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Install Font Awesome and the Google Web fonts -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+
+    <!--[if lt IE 9]>
+      <script src="lib/js/html5shiv.js"></script>
+      <![endif]-->
+
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <div class="slides">
+
+        <section data-background-transition="none" data-background="https://farm8.static.flickr.com/7079/7223111614_83d981ac85_z.jpg" style="background: rgba(29,31,33,0.9)">
+          <h1>Computer Science 112:</h1>
+          <h2>Introduction to Computer Science I</h2>
+          <p>Gregory M. Kapfhammer</p>
+          <br /><small><a title="St. Catherine's School Art (39)" href="https://flickr.com/photos/billboardartproject/7223111614">flickr photo</a> shared by <a href="https://flickr.com/people/billboardartproject">Billboard Art Project</a> under a <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">Creative Commons ( BY-NC-ND ) license</a> </small>
+        </section>
+
+        <section>
+          <h1 id="why_should_you_study_computer_science?">Why Should You Study Computer Science?</h1>
+        </section>
+
+        <section>
+          <h1 id="become_an_active_creator_of_valued_technology">Become an Active Creator of Valued Technology</h1>
+        </section>
+
+        <section>
+          <h1 id="take_on_a_rewarding_intellectual_challenging">Take on a Rewarding Intellectual Challenge</h1>
+        </section>
+
+        <section>
+          <h1 id="internships_and_careers">Internships and Careers</h1>
+          <p class="fragment"><b class="orange">"Computer science: It's where the jobs are. It's also where the future is."</b></p>
+          <p class="fragment">Edward D. Lazowska</p>
+        </section>
+
+        <section data-background-transition="none" data-background="http://farm9.static.flickr.com/8450/7975543462_bd8f7f5471.jpg" style="">
+        </section>
+
+        <section data-background-transition="none" data-background="http://farm9.static.flickr.com/8450/7975543462_bd8f7f5471.jpg" style="background: rgba(29,31,33,0.9)">
+          <h1 id="evidence_to_support_this_assertion?">Evidence to Support this Assertion?</h1>
+          <p class="fragment">The third best-rated job in the world</p>
+          <p class="fragment">4 of the 10 top highest paid, highest growth jobs</p>
+          <br /><small><a href="http://creativecommons.org/licenses/by/2.0/">creative commons licensed ( BY )</a> <a title="Veterans Tribute Career  Technical Academy" href="http://flickr.com/photos/departmentofed/7975543462">flickr photo</a> shared by <a href="http://flickr.com/people/departmentofed">US Department of Education</a></small>
+        </section>
+
+        <section data-background-transition="none" data-background="http://farm9.static.flickr.com/8450/7975543462_bd8f7f5471.jpg" style="background: rgba(29,31,33,0.9)">
+          <h1 id="evidence_to_support_this_assertion?">Evidence to Support this Assertion?</h1>
+          <p class="fragment">51,474 students graduate with a degree ...</p>
+          <p class="fragment">...122,300 open positions needing that degree!</p>
+          <br /><small><a href="http://creativecommons.org/licenses/by/2.0/">creative commons licensed ( BY )</a> <a title="Veterans Tribute Career  Technical Academy" href="http://flickr.com/photos/departmentofed/7975543462">flickr photo</a> shared by <a href="http://flickr.com/people/departmentofed">US Department of Education</a></small>
+        </section>
+
+        <section data-background-transition="none" data-background="http://farm9.static.flickr.com/8450/7975543462_bd8f7f5471.jpg" style="background: rgba(29,31,33,0.9)">
+          <h1 id="evidence_to_support_this_assertion?">Evidence to Support this Assertion?</h1>
+          <p class="fragment">4.2 million jobs by 2020</p>
+          <p class="fragment">Among the fastest growing fields in the USA</p>
+          <br /><small><a href="http://creativecommons.org/licenses/by/2.0/">creative commons licensed ( BY )</a> <a title="Veterans Tribute Career  Technical Academy" href="http://flickr.com/photos/departmentofed/7975543462">flickr photo</a> shared by <a href="http://flickr.com/people/departmentofed">US Department of Education</a></small>
+        </section>
+
+        <section data-background-transition="none" data-background="http://farm9.static.flickr.com/8450/7975543462_bd8f7f5471.jpg" style="background: rgba(29,31,33,0.9)">
+          <h1 id="evidence_to_support_this_assertion?">Evidence to Support this Assertion?</h1>
+          <p class="fragment">1.4 million American big data workers in 2015</p>
+          <p class="fragment"> 4.4 million global big data workers in 2015</p>
+          <br /><small><a href="http://creativecommons.org/licenses/by/2.0/">creative commons licensed ( BY )</a> <a title="Veterans Tribute Career  Technical Academy" href="http://flickr.com/photos/departmentofed/7975543462">flickr photo</a> shared by <a href="http://flickr.com/people/departmentofed">US Department of Education</a></small>
+        </section>
+
+        <section data-background-transition="none" data-background="http://farm9.static.flickr.com/8450/7975543462_bd8f7f5471.jpg" style="background: rgba(29,31,33,0.9)">
+          <h1 id="potential_careers_options?">Potential Careers Options?</h1>
+          <p class="fragment">Software engineer</p>
+          <p class="fragment">Data scientist</p>
+          <br /><small><a href="http://creativecommons.org/licenses/by/2.0/">creative commons licensed ( BY )</a> <a title="Veterans Tribute Career  Technical Academy" href="http://flickr.com/photos/departmentofed/7975543462">flickr photo</a> shared by <a href="http://flickr.com/people/departmentofed">US Department of Education</a></small>
+        </section>
+
+        <section data-background-transition="none" data-background="http://farm9.static.flickr.com/8450/7975543462_bd8f7f5471.jpg" style="background: rgba(29,31,33,0.9)">
+          <h1 id="wow!">Wow!</h1>
+          <p class="fragment">Schedule a meeting during office hours to learn more about internship and career opportunities</p>
+          <p class="fragment">Visit the Office of Career Education to talk about your professional future</p>
+          <p class="fragment">Actively search for opportunities &mdash; there are many of them available to you!</p>
+          <br /><small><a href="http://creativecommons.org/licenses/by/2.0/">creative commons licensed ( BY )</a> <a title="Veterans Tribute Career  Technical Academy" href="http://flickr.com/photos/departmentofed/7975543462">flickr photo</a> shared by <a href="http://flickr.com/people/departmentofed">US Department of Education</a></small>
+        </section>
+
+        <section>
+          <h1 id="more_than_just_getting_an_internship_or_job">More than Just Getting an Internship or Job</h1>
+        </section>
+
+        <section data-background-transition="none" data-background="http://farm9.static.flickr.com/8309/8047457525_31081c9ea4.jpg" style="">
+        </section>
+
+        <section data-background-transition="none" data-background="http://farm9.static.flickr.com/8309/8047457525_31081c9ea4.jpg" style="background: rgba(29,31,33,0.9)">
+          <h1 id="many_rewards">Many Rewards</h1>
+          <p class="fragment">Create useful software and hardware</p>
+          <p class="fragment">Lifelong learning opportunities</p>
+          <p class="fragment">Branch out into many fields</p>
+          <p class="fragment">Change the world</p>
+          <p class="fragment"><b class="orange">There are a few seats left in the CMPSC 111 sections!</b></p>
+          <br /><small><a href="http://creativecommons.org/licenses/by-nc-nd/2.0/">creative commons licensed ( BY-NC-ND )</a> <a title="Haddie Cooke & Dan Benjamin of 5by5 Studios at the Panic Software HQ" href="http://flickr.com/photos/laughingsquid/8047457525">flickr photo</a> shared by <a href="http://flickr.com/people/laughingsquid">Scott Beale</a></small>
+        </section>
+
+        <section data-background-transition="none" data-background="http://farm9.static.flickr.com/8309/8047457525_31081c9ea4.jpg" style="background: rgba(29,31,33,0.9)">
+          <h1 id="many_rewards">Others ways to start smiling?</h1>
+          <p class="fragment">Read the syllabus for your classes!</p>
+          <br /><small><a href="http://creativecommons.org/licenses/by-nc-nd/2.0/">creative commons licensed ( BY-NC-ND )</a> <a title="Haddie Cooke & Dan Benjamin of 5by5 Studios at the Panic Software HQ" href="http://flickr.com/photos/laughingsquid/8047457525">flickr photo</a> shared by <a href="http://flickr.com/people/laughingsquid">Scott Beale</a></small>
+        </section>
+
+      </div>
+
+      <script src="lib/js/head.min.js"></script>
+      <script src="js/reveal.min.js"></script>
+
+      <script>
+
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+          controls: true,
+          progress: true,
+          history: true,
+          center: true,
+
+          theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+          transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+          // Parallax scrolling
+          // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+          // parallaxBackgroundSize: '2100px 900px',
+
+          // Optional libraries used to extend on reveal.js
+          dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }
+          ]
+        });
+
+      </script>
+
+  </body>
+</html>

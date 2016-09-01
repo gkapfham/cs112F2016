@@ -28,13 +28,13 @@
 
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
-      if( window.location.search.match( /print-pdf/gi ) ) {
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = 'css/print/pdf.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-      }
+if( window.location.search.match( /print-pdf/gi ) ) {
+  var link = document.createElement( 'link' );
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = 'css/print/pdf.css';
+  document.getElementsByTagName( 'head' )[0].appendChild( link );
+}
     </script>
 
   </head>
@@ -104,8 +104,27 @@
           <p class="fragment"><b class="green">Wait, what does <code>%</code> mean?</b></p>
           <p class="fragment">Operator <b class="orange">precedence</b></p>
           <p class="fragment">What about <b class="orange">parentheses</b>?</p>
-          <p class="fragment">Can you draw an <b class="orange">expression tree</b>?</p>
+          <p class="fragment"><b class="blue">Review Sections 1.4.1 and 1.4.2 for more details</b></p>
           <br /><small><a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">creative commons licensed ( BY-NC-SA )</a> <a title="Shock" href="http://flickr.com/photos/jannemei/1023015396">flickr photo</a> shared by <a href="http://flickr.com/people/jannemei">jannemei</a></small>
+        </section>
+
+        <section>
+          <h1 id="data_conversion">Type Conversion</h1>
+          <p class="fragment"><b class="green">Can we ever transform one data type into another?</b></p>
+          <p class="fragment">We can use <b class="orange">widening</b> and <b class="orange">shortening</b> conversions</p>
+          <p class="fragment">Converting from a <code>byte</code> to a <code>short</code> is safe! <b class="green">Why</b>?</p>
+          <p class="fragment">Narrowing conversions can lead to information loss. <b class="green">Why</b>?</p>
+          <p class="fragment"><b class="blue">Refer to Section 1.4.3 for details about casting</b></p>
+        </section>
+
+        <section>
+          <h1 id="conversion_techniques">Conversion Techniques</h1>
+          <p class="fragment"><u>Assignment</u> conversion: <b class="orange"><code>money = dollars</code></b> ... </p>
+          <p class="fragment">... when dollars is an <code>int</code> and money is a <code>float</code></p>
+          <p class="fragment"><u>Promotion</u> conversion: <b class="orange"><code>result = sum / count</code></b> ... </p>
+          <p class="fragment">... when sum is a <code>float</code> and count is an <code>int</code></p>
+          <p class="fragment"><u>Casting</u> conversion: <b class="orange"><code>dollars = (int) money</code></b> ... </p>
+          <p class="fragment">... when dollars is an <code>int</code> and money is a <code>float</code></p>
         </section>
 
         <section>
@@ -233,39 +252,8 @@ public class Lincoln
         </section>
 
         <section>
-          <h1 id="java_programs">Formatting Concerns</h1>
-          <pre><code data-trim>
-public class Lincoln2{public static void main(String[]args){
-System.out.println("A quote by Abraham Lincoln:");
-System.out.println("Whatever you are, be a good one.");}}
-                    </code>
-          </pre>
-          <p class="fragment">What is wrong with this program?</p>
+          <h1><b class="blue">Review Chapter 1 for more details!</b></h1>
         </section>
-
-        <section>
-          <pre><code data-trim>
-                              public       class
-     Lincoln3
-   {
-                 public
-   static
-        void
-  main
-        (
-String
-            []
-    args                       )
-  {
-  System.out.println        (
-"A quote by Abraham Lincoln:"          )
-  ;        }
-          }
-          </code>
-          </pre>
-          <p class="fragment">What is wrong with this program?</p>
-        </section>
-
 
       </div>
 
@@ -274,31 +262,31 @@ String
 
       <script>
 
-        // Full list of configuration options available here:
-        // https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-          controls: true,
-          progress: true,
-          history: true,
-          center: true,
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+  controls: true,
+  progress: true,
+  history: true,
+  center: true,
 
-          theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-          transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+  theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+  transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
 
-          // Parallax scrolling
-          // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-          // parallaxBackgroundSize: '2100px 900px',
+  // Parallax scrolling
+  // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+  // parallaxBackgroundSize: '2100px 900px',
 
-          // Optional libraries used to extend on reveal.js
-          dependencies: [
-          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-          ]
-        });
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+  { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+  { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+  { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+  { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+});
 
       </script>
 

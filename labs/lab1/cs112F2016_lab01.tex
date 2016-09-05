@@ -39,50 +39,50 @@ this laboratory assignment, you may pick your own partner (or, team members).
 \begin{enumerate}
   \setlength{\itemsep}{0pt}
 
-  \item If you do not already have a Bitbucket account, please go to the Bitbucket web site and create one ---
-    make sure that you use your {\tt allegheny.edu} email address so that you can create an unlimited number of free
-    Bitbucket repositories. Then, upload your ssh key to Bitbucket.
+\item If you do not already have a Bitbucket account, please go to the Bitbucket web site and create one ---
+  make sure that you use your {\tt allegheny.edu} email address so that you can create an unlimited number of free
+  Bitbucket repositories. Then, upload your ssh key to Bitbucket.
 
-  \item If you have never done so before, you must use the {\tt ssh-keygen} program to create secure-shell keys that you
-    can use to support your communication with the Bitbucket servers. Follow the prompts to create your keys and save
-    them in the default directory (press ``Enter'' after you are prompted: ``{\tt Enter file in which to save the key ...
-        :}'', then press ``Enter'' twice if you do not wish to create a passphrase at this time or type your selected
-      passphrase if you do).   Type {\tt man ssh-keygen} and talk with the course instructor to learn more about this
-    program.  What files does {\tt ssh-keygen} produce?  Where does this program store these files by default?  You do
-    not need to complete this step if you have already run {\tt ssh-keygen}.
+\item If you have never done so before, you must use the {\tt ssh-keygen} program to create secure-shell keys that you
+  can use to support your communication with the Bitbucket servers. Follow the prompts to create your keys and save
+  them in the default directory (press ``Enter'' after you are prompted: ``{\tt Enter file in which to save the key ...
+  :}'', then press ``Enter'' twice if you do not wish to create a passphrase at this time or type your selected
+  passphrase if you do).   Type {\tt man ssh-keygen} and talk with the course instructor to learn more about this
+  program.  What files does {\tt ssh-keygen} produce?  Where does this program store these files by default?  You do
+  not need to complete this step if you have already run {\tt ssh-keygen}.
 
-    Once you have created your ssh keys, you should raise your hand to invite the course instructor to help you with the
-    next steps, thus best ensuring that Bitbucket is configured correctly. First, you must log into Bitbucket and look
-    in the right corner for an account avatar with a down arrow.  Click on this blue link and then select the ``Manage
-    account'' option. Now, scroll down until you found the ``SSH keys'' option and upload your ssh key to Bitbucket. You
-    can copy your SSH key by going to the terminal and typing ``{\tt cat \textasciitilde{}/.ssh/id\_rsa.pub}'' command.
-    If you cannot complete any of these steps, then please see the instructor. Students who have already created
-    and configured their Bitbucket accounts will not need to complete this step unless you did not use your
-    {\tt allegheny.edu} email account's name for Bitbucket.
+  Once you have created your ssh keys, you should raise your hand to invite the course instructor to help you with the
+  next steps, thus best ensuring that Bitbucket is configured correctly. First, you must log into Bitbucket and look
+  in the right corner for an account avatar with a down arrow.  Click on this blue link and then select the ``Manage
+  account'' option. Now, scroll down until you found the ``SSH keys'' option and upload your ssh key to Bitbucket. You
+  can copy your SSH key by going to the terminal and typing ``{\tt cat \textasciitilde{}/.ssh/id\_rsa.pub}'' command.
+  If you cannot complete any of these steps, then please see the instructor. Students who have already created
+  and configured their Bitbucket accounts will not need to complete this step unless you did not use your
+  {\tt allegheny.edu} email account's name for Bitbucket.
 
-  \item Now, you need to test to see if you can authenticate with the Bitbucket servers.  First, show the course
-    instructor that you have correctly configured your Bitbucket account.  Now, ask the instructor to share the course's
-    Git repository with you.  Open a terminal window on your workstation and change into the directory where you will
-    store your files for this course.  For instance, you might make a {\tt cs112F2016/} directory that will contain the
-    Git repository that I will always use to share files with you.  Once you have done so, please type the following
-    command: ``{\tt git clone git@bitbucket.org:gkapfham/cs112f2016-share.git}''.  If everything worked correctly, you
-    should be able to download all of the files that you will need to use for this laboratory assignment. Please resolve
-    any problems that you encountered by first reviewing the Bitbucket documentation and then discussing the matter
-    with your classmates. If you are still not able to run ``{\tt git clone}'', then please see the instructor.
+\item Now, you need to test to see if you can authenticate with the Bitbucket servers.  First, show the course
+  instructor that you have correctly configured your Bitbucket account.  Now, ask the instructor to share the course's
+  Git repository with you.  Open a terminal window on your workstation and change into the directory where you will
+  store your files for this course.  For instance, you might make a {\tt cs112F2016/} directory that will contain the
+  Git repository that I will always use to share files with you.  Once you have done so, please type the following
+  command: ``{\tt git clone git@bitbucket.org:gkapfham/cs112f2016-share.git}''.  If everything worked correctly, you
+  should be able to download all of the files that you will need to use for this laboratory assignment. Please resolve
+  any problems that you encountered by first reviewing the Bitbucket documentation and then discussing the matter
+  with your classmates. If you are still not able to run ``{\tt git clone}'', then please see the instructor.
 
-  \item Using your terminal window, you should browse the files that are in this Git repository.  In particular, please
-    look in the {\tt labs/lab1/src/} directory and use Vim to study the two Java programs that you find.  Remember, the
-    ``{\tt cd}'' command allows you to change into a directory.
+\item Using your terminal window, you should browse the files that are in this Git repository.  In particular, please
+  look in the {\tt labs/lab1/src/} directory and use Vim to study the two Java programs that you find.  Remember, the
+  ``{\tt cd}'' command allows you to change into a directory.
 
-  \item If you have not done so already, you should reconfigure your Vim text editor so that it uses the ``spf13-vim''
-    configuration so that you have many of the advanced editing features on which we will rely this semester. Those
-    students who have not installed spf13-vim can follow the instructions at \url{http://vim.spf13.com/} to better
-    configure Vim. If you have already installed this Vim configuration, then please make sure that you know how to use
-    the plugins and features that it provides; see the course instructor if you are stuck on this step. Please note that
-    students in this course are not required to use ``spf13-vim'' if they already have a suitable Vim configuration.
-    But, if you do not have a suitable configuration that provides access to advanced Vim plugins, then you are
-    encouraged to try ``spf13-vim'' or some other configuration of Vim so that you can easily use a wide variety of
-    advanced plugins.
+\item If you have not done so already, you should reconfigure your Vim text editor so that it uses the ``spf13-vim''
+  configuration so that you have many of the advanced editing features on which we will rely this semester. Those
+  students who have not installed spf13-vim can follow the instructions at \url{http://vim.spf13.com/} to better
+  configure Vim. If you have already installed this Vim configuration, then please make sure that you know how to use
+  the plugins and features that it provides; see the course instructor if you are stuck on this step. Please note that
+  students in this course are not required to use ``spf13-vim'' if they already have a suitable Vim configuration.
+  But, if you do not have a suitable configuration that provides access to advanced Vim plugins, then you are
+  encouraged to try ``spf13-vim'' or some other configuration of Vim so that you can easily use a wide variety of
+  advanced plugins.
 
 \end{enumerate}
 
@@ -92,7 +92,7 @@ this laboratory assignment, you may pick your own partner (or, team members).
 
 Now that you have learned how to clone an existing Git repository, you should make a new repository in the {\tt
   cs112F2016/} directory that you previously created.  First, make a new directory called {\tt cs112F2016-<your user
-  name>}. Then, change into this directory and type the command ``{\tt git init .}''.  At this point, you should go into
+name>}. Then, change into this directory and type the command ``{\tt git init .}''.  At this point, you should go into
 the {\tt cs112f2016-share} repository and use the ``{\tt cp -r}'' command to copy the entire {\tt labs/} directory from
 the {\tt cs112f2016-share} repository to {\tt cs112F2016-<your user name>}.  Once the files are in your own Git
 repository, please use the ``{\tt git add}'' and ``{\tt git commit}'' commands to add them correctly. If you do not know
@@ -107,7 +107,7 @@ repository with the course instructor --- my Bitbucket user name is ``gkapfham''
 
 You can learn more about Git by consulting web sites like  \url{http://gitimmersion.com/}.  At minimum, you should
 ensure that you understand how to use the following commands: ``{\tt git init}'', ``{\tt git status}'', ``{\tt git
-  add}'', ``{\tt git commit}'', ``{\tt git push}'', and ``{\tt git pull}''. If you want to interact with your Git
+add}'', ``{\tt git commit}'', ``{\tt git push}'', and ``{\tt git pull}''. If you want to interact with your Git
 repository through their Vim text editor---instead of through the terminal window---then you are encourage to learn how
 to use the Fugitive plugin that is part of spf13-vim.
 
@@ -146,30 +146,68 @@ this step of the laboratory assignment.
 
 \section*{Summary of the Required Deliverables}
 
-  This assignment invites you to submit one printed and electronic version of these deliverables:
+This assignment invites you to submit both a printed and an electronic version of these deliverables:
 
-  \vspace*{-.05in}
-  \begin{enumerate}
+\vspace*{-.05in}
+\begin{enumerate}
+
   \itemsep 0em
-    \item A description of the steps that a user must take to configure Git and Bitbucket
-    \item A description of the inputs, outputs, and behavior of the six aforementioned Git commands
-    \item A commented version of the {\tt Hooray.java} and {\tt Weeee.java} programs
-    \item A one-page report that clearly responds to the following four prompts:
+  \item A description of the steps that a user must take to configure Git and Bitbucket
+  \item A description of the inputs, outputs, and behavior of the six aforementioned Git commands
+  \item A commented version of the {\tt Hooray.java} and {\tt Weeee.java} programs
 
-      \vspace*{-.05in}
-      \begin{enumerate}
+  \item A one-page report that responds to these five prompts about the first two programs:
 
-        \item The steps that you took to compile and run both of these programs
+    \vspace*{-.05in}
+    \begin{enumerate}
+      \itemsep 0em
 
-        \item The output that each of these programs produce
+      \item The steps that you took to compile and run both of these programs.
 
-        \item An explanation for why these programs create the output that they do
+      \item A snapshot of the output that each of these programs produce.
 
-        \item A discussion of the similarities and differences between these programs and their output
+      \item An explanation for why these programs create the output that they do.
 
-      \end{enumerate}
+      \item A discussion of the similarities and differences between these programs and their output.
 
-  \end{enumerate}
+      \item An explanation of why it is useful to create comments with the Javadoc standard.
+
+    \end{enumerate}
+
+  \item A one-page report that responds to these four prompts about the third program:
+
+    \vspace*{-.05in}
+    \begin{enumerate}
+      \itemsep 0em
+
+      \item The steps that you took to compile and run this final program.
+
+      \item The output that this program produces in the terminal window.
+
+      \item An explanation of why it is useful to organize Java programs into packages.
+
+      \item A response to the following questions about programming in the Java language:
+
+        \begin{enumerate}
+          \itemsep 0em
+
+          \item The {\tt CreditCard} constructor uses the {\tt this} keyword --- what is its purpose?
+
+          \item The {\tt CreditCard} class contains a {\tt static} method --- what does this do?
+
+          \item The {\tt CreditCard} class has a {\tt main} method --- how does it use this method?
+
+          \item How does the {\tt CreditCard} class use a {\tt for} loop and a {\tt while} loop?
+
+          \item The {\tt CreditCard} class creates an array called {\tt wallet} --- what is an array?
+
+        \end{enumerate}
+
+    \end{enumerate}
+
+\end{enumerate}
+
+\vspace*{-.05in}
 
 Before you turn in this assignment, you also must ensure that the course instructor has read access to your Bitbucket
 repository that is named according to the convention {\tt cs112F2016-<your user name>}. Please note that each student in

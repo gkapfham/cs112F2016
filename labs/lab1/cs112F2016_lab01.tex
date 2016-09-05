@@ -29,7 +29,7 @@ appropriately under the bounds of the Honor Code, you may also post your questio
 During this laboratory assignment and subsequent assignments, we will securely communicate with the Bitbucket.org
 servers that will host all of our projects.  In this laboratory assignment, we will perform all of the steps to
 configure the accounts on the departmental servers and the Bitbucket service.  Throughout the assignment, you should
-refer to the following Web site for additional information:
+refer to the following web site for additional information:
 \url{https://confluence.atlassian.com/display/BITBUCKET/Bitbucket+101}.  As you will be required to turn in a report
 describing each step that you finish in this assignment, please be sure to keep a record of all of the steps that you
 complete and the challenges that you face.  You are also responsible for working with a team of two or three people to
@@ -39,7 +39,7 @@ this laboratory assignment, you may pick your own partner (or, team members).
 \begin{enumerate}
   \setlength{\itemsep}{0pt}
 
-  \item If you do not already have a Bitbucket account, please go to the Bitbucket Web site and create one ---
+  \item If you do not already have a Bitbucket account, please go to the Bitbucket web site and create one ---
     make sure that you use your {\tt allegheny.edu} email address so that you can create an unlimited number of free
     Bitbucket repositories. Then, upload your ssh key to Bitbucket.
 
@@ -60,17 +60,12 @@ this laboratory assignment, you may pick your own partner (or, team members).
     and configured their Bitbucket accounts will not need to complete this step unless you did not use your
     {\tt allegheny.edu} email account's name for Bitbucket.
 
-  % \item If you have never done so before, you must use the {\tt ssh-keygen} program to create secure-shell keys that you
-  %   can use to support your communication with the Bitbucket servers.  Type {\tt man ssh-keygen} and talk with the
-  %   members of your team to learn more about how to use this program.  What files does {\tt ssh-keygen} produce?  Where
-  %   does this program store these files?
-
   \item Now, you need to test to see if you can authenticate with the Bitbucket servers.  First, show the course
     instructor that you have correctly configured your Bitbucket account.  Now, ask the instructor to share the course's
     Git repository with you.  Open a terminal window on your workstation and change into the directory where you will
-    store your files for this course.  For instance, you might make a {\tt cs112S2015/} directory that will contain the
+    store your files for this course.  For instance, you might make a {\tt cs112F2016/} directory that will contain the
     Git repository that I will always use to share files with you.  Once you have done so, please type the following
-    command: ``{\tt git clone git@bitbucket.org:gkapfham/cs112s2015-share.git}''.  If everything worked correctly, you
+    command: ``{\tt git clone git@bitbucket.org:gkapfham/cs112f2016-share.git}''.  If everything worked correctly, you
     should be able to download all of the files that you will need to use for this laboratory assignment. Please resolve
     any problems that you encountered by first reviewing the Bitbucket documentation and then discussing the matter
     with your classmates. If you are still not able to run ``{\tt git clone}'', then please see the instructor.
@@ -83,28 +78,34 @@ this laboratory assignment, you may pick your own partner (or, team members).
     configuration so that you have many of the advanced editing features on which we will rely this semester. Those
     students who have not installed spf13-vim can follow the instructions at \url{http://vim.spf13.com/} to better
     configure Vim. If you have already installed this Vim configuration, then please make sure that you know how to use
-    the plugins and features that it provides; see the course instructor if you are stuck on this step.
+    the plugins and features that it provides; see the course instructor if you are stuck on this step. Please note that
+    students in this course are not required to use ``spf13-vim'' if they already have a suitable Vim configuration.
+    But, if you do not have a suitable configuration that provides access to advanced Vim plugins, then you are
+    encouraged to try ``spf13-vim'' or some other configuration of Vim so that you can easily use a wide variety of
+    advanced plugins.
 
 \end{enumerate}
+
+\vspace*{-.1in}
 
 \section*{Creating a New Repository}
 
 Now that you have learned how to clone an existing Git repository, you should make a new repository in the {\tt
-  cs112S2015/} directory that you previously created.  First, make a new directory called {\tt cs112S2015-<your user
+  cs112F2016/} directory that you previously created.  First, make a new directory called {\tt cs112F2016-<your user
   name>}. Then, change into this directory and type the command ``{\tt git init .}''.  At this point, you should go into
-the {\tt cs112s2015-share} repository and use the ``{\tt cp -r}'' command to copy the entire {\tt labs/} directory from
-the {\tt cs112s2015-share} repository to {\tt cs112S2015-<your user name>}.  Once the files are in your own Git
+the {\tt cs112f2016-share} repository and use the ``{\tt cp -r}'' command to copy the entire {\tt labs/} directory from
+the {\tt cs112f2016-share} repository to {\tt cs112F2016-<your user name>}.  Once the files are in your own Git
 repository, please use the ``{\tt git add}'' and ``{\tt git commit}'' commands to add them correctly. If you do not know
 how to use ``{\tt git add}'' and ``{\tt git commit}'' in the terminal window, please learn more about them by searching
 on the Internet, talking about them with your classmates, and discussing them with the course instructor.
 
-Next, you should use the Bitbucket Web site to create a repository that has the same name as the local directory and
+Next, you should use the Bitbucket web site to create a repository that has the same name as the local directory and
 local repository.  You must follow Bitbucket's instructions to push the code and tags in your local repository to the
-remote one. When you are finished with this step, you should see in your Web browser that the Bitbucket servers are
+remote one. When you are finished with this step, you should see in your web browser that the Bitbucket servers are
 correctly storing the two Java programs. Once the Git repository contains the correct files, you should share your Bitbucket
 repository with the course instructor --- my Bitbucket user name is ``gkapfham''.
 
-You can learn more about Git by consulting Web sites like  \url{http://gitimmersion.com/}.  At minimum, you should
+You can learn more about Git by consulting web sites like  \url{http://gitimmersion.com/}.  At minimum, you should
 ensure that you understand how to use the following commands: ``{\tt git init}'', ``{\tt git status}'', ``{\tt git
   add}'', ``{\tt git commit}'', ``{\tt git push}'', and ``{\tt git pull}''. If you want to interact with your Git
 repository through their Vim text editor---instead of through the terminal window---then you are encourage to learn how
@@ -167,7 +168,7 @@ to use the Fugitive plugin that is part of spf13-vim.
   \end{enumerate}
 
 Before you turn in this assignment, you also must ensure that the course instructor has read access to your Bitbucket
-repository that is named according to the convention {\tt cs112S2015-<your user name>}. Please note that each student in
+repository that is named according to the convention {\tt cs112F2016-<your user name>}. Please note that each student in
 the class is responsible for completing and submitting their own version of this assignment. While it is acceptable for
 members of this class to have high-level conversations, you should not share source code or full command lines with your
 classmates.  That is, it is necessary to distinguish carefully between the student who discusses the principles

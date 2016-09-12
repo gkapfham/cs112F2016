@@ -61,7 +61,23 @@ working correctly. You may talk with a teaching assistant or the course instruct
 
 \section*{Evaluating the Performance of Iteration}
 
-% \vspace*{-.11in}
+The final version of the {\tt SentencesReverser} program operates in several distinct phases: first, it inputs sentences
+from the {\tt sentences.txt} file; second, it reverses all of the sentences stored in the {\tt private Sentence[]
+sentences} instance variable; and third it outputs all of the sentences by calling the {\tt printSentences} method. For
+the last part of this laboratory assignment, you should modify your program so that it collects timing information for
+each of these three phases. Please note that, since these phases occur ``inside of'' the Java program, we cannot employ
+the timing method that you learned in class. That is, running the program with {\tt /usr/bin/time} in front of the call
+to the Java virtual machine will not allow us to collect timings the desired level of granularity. Instead, you will
+need to surround calls to the methods that you want to profile with calls to the {\tt currentTimeMillis} method in the
+{\tt java.lang.System} class, as shown in this code segment.
+
+\begin{verbatim}
+    long beforeRead = System.currentTimeMillis();
+    sentences.readSentencesFromFile();
+    long afterRead = System.currentTimeMillis();
+    System.out.println("Read time: " + (afterRead - beforeRead));
+\end{verbatim}
+
 \section*{Carefully Review the Honor Code}
 
 The Academic Honor Program that governs the entire academic program at Allegheny College is described in the Allegheny

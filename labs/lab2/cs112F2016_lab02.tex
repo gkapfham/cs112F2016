@@ -24,8 +24,37 @@ assistant. If done appropriately, you may also post your question to our Slack t
 
 \section*{Compiling, Running, and Repairing a Java Program}
 
-\vspace*{-.11in}
-\subsubsection*{Carefully Review the Honor Code}
+This laboratory assignment is inspired by programming project P-1.26 on page 57 of your textbook. Instead of requiring
+you to start this assignment ``from scratch'' I have begun an implementation and placed it in the ``share'' repository
+for our couurse. To start this assignment, please use your terminal window to navigate to the share repository and then
+run the ``{\tt git pull}'' command. Now, you should see that you have three source code files, with a {\tt main}
+method located in the class called {\tt SentencesReverser}. Please use the Java compiler and virtual machine to run this
+program in your terminal window. At this point, you should see that it produces the following output:
+
+\begin{verbatim}
+Strings, Wrappers, Arrays, and Enum Types
+Increment and Decrement Operators
+Type Conversions
+An Example Program
+Exception in thread "main" java.lang.NullPointerException
+        at Sentences.printSentences(Sentences.java:33)
+        at SentencesReverser.main(SentencesReverser.java:12)
+\end{verbatim}
+
+This output clearly indicates that there is a defect in at least one of the three Java class files that I have provided
+to you! Before going further with this assignment, please find and fix this defect. The output provided above should
+draw your attention to line 33 of the {\tt printSentences} method in the {\tt Sentences} class. Once you have repaired
+the Java program, you should carefully study the source code of the three Java classes so that you better understand how
+the program works and how the three classes help to solve programming project P-1.26. You should also try to
+conceptualize what an instance of the {\tt Sentences} class looks like in the computer's memory. Once you better
+understand the design and implementation of the {\tt SentencesReverser} program, then you are ready to extend it with
+the feature that is requested on page 57 of your textbook.
+
+As it is currently implemented, {\tt SentencesReverser} inputs a list of sentences from a text file called {\tt
+sentences.txt} and then displays them to the terminal window.
+
+% \vspace*{-.11in}
+\section*{Carefully Review the Honor Code}
 
 The Academic Honor Program that governs the entire academic program at Allegheny College is described in the Allegheny
 Academic Bulletin.  The Honor Program applies to all work that is submitted for academic credit or to meet non-credit
@@ -67,6 +96,8 @@ This assignment invites you to submit both a printed and an electronic version o
       \itemsep 0em
 
       \item What is the mistake that you found and fixed in the three provided Java classes?
+
+      \item What is the relationship between the three Java classes used to solve project P-1.26?
 
       \item What does an instance of the {\tt Sentence} class look like in the computer's memory?
 

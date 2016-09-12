@@ -78,6 +78,21 @@ need to surround calls to the methods that you want to profile with calls to the
     System.out.println("Read time: " + (afterRead - beforeRead));
 \end{verbatim}
 
+At this point in the assignment, you should follow the pattern in the previous code segment to time the three phases of
+the {\tt SentencesReverser} program. To accomplish this task, you may want to declare a total of six variables that will
+respectively track the time before and after the execution of the methods subject to performance evaluation. For
+instance, to time the {\tt readSentencesFromFile} method the previous code segment declared the variables called {\tt
+beforeRead} and {\tt afterRead} read and then used the equation ``{\tt afterRead - beforeRead}'' to calculated the time
+that elapsed when running the {\tt readSentencesFromFile} method.
+
+Once you have added all of the source code needed to record the execution time of the three phases of the {\tt
+SentencesReverser} program, you are ready to conduct an experiment to evaluate the performance of iteration in a Java
+program. As we have learned during our classroom discussions, you must carefully design your experiment so as to ensure
+that you are measuring what you desire to study. For instance, you should conduct your experiment by varying the number
+of sentences in the {\tt sentences.txt} file and then running multiple trials of the {\tt SentencesReverser}. Then, you
+will need to record the program's output into a data table organized according to the number of sentences in the text
+file and the timings for the three phases (i.e., read, reverse, and print).
+
 \section*{Carefully Review the Honor Code}
 
 The Academic Honor Program that governs the entire academic program at Allegheny College is described in the Allegheny
@@ -86,12 +101,12 @@ requirements for graduation at Allegheny College.  This includes all work assign
   laboratory assignments, and the final project).  All students who have enrolled in the College will work under the Honor
 Program.  Each student who has matriculated at the College has acknowledged the following pledge:
 
-\vspace*{-.05in}
+\vspace*{-.1in}
 \begin{quote}
   I hereby recognize and pledge to fulfill my responsibilities, as defined in the Honor Code, and to maintain the
   integrity of both myself and the College community as a whole.
 \end{quote}
-\vspace*{-.05in}
+\vspace*{-.1in}
 
 \noindent It is understood that an important part of the learning process in any course, and particularly one in
 computer science, derives from thoughtful discussions with teachers and fellow students.  Such dialogue is encouraged.
@@ -129,13 +144,24 @@ This assignment invites you to submit both a printed and an electronic version o
 
     \end{enumerate}
 
-  \item A one-page experiment report that comments on the timing experiments that you conducted.
+  \item A one-page experiment report that comments on the timing experiments that you conducted. Your experiment report
+    should include, at minimum, the following deliverables:
+
+    \vspace*{-.05in}
+    \begin{enumerate}
+      \itemsep 0em
+      \item An overview of how you collected timing information for the phases in the {\tt  SentencesReverser}.
+      \item A description of the steps that you took to conduct the experiments and collect timings.
+      \item Tables of data that record the number of sentences subject to reversal and the timings.
+      \item A list of the challenges you faced when creating the program or running experiments.
+    \end{enumerate}
 
 \end{enumerate}
 
 \vspace*{-.05in}
 
 Before you turn in this assignment, you also must ensure that the course instructor has read access to your personal
-Bitbucket repository that is named according to the convention {\tt cs112F2016-<your user name>}.
+Bitbucket repository that is named according to the convention {\tt cs112F2016-<your user name>}. Please see the course
+instructor if you have questions about this assignment.
 
 \end{document}

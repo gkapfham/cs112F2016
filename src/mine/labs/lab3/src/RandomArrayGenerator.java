@@ -2,21 +2,6 @@ import java.util.Random;
 
 public class RandomArrayGenerator {
 
-public static class ArrayPrinter {
-
-  public static <T> void print(T[] data, String indent, boolean debug) {
-    if(debug) {
-      for(int i = 0; i < data.length; i++) {
-        System.out.println(indent + data[i]);
-      }
-    }
-    else {
-      System.out.print(indent + " ... elided array ...");
-    }
-  }
-
-}
-
 private static Random generator;
 
 static {

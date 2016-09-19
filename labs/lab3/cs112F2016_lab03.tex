@@ -38,7 +38,7 @@ same person as you did from a previous assignment. Once you have chosen your par
 discussed the entire laboratory assignment sheet, please create a Bitbucket repository according to the naming
 convention {\tt cs112F2016-lab03-<user name one>-<user name two>}.
 
-\section*{Building and Running a Java Program}
+\section*{Building, Running, and Enhancing a Java Program}
 
 In a previous laboratory assignment, you implemented and empirically evaluated the performance of an algorithm for
 reversing the contents of an array. In this laboratory assignment, you will study a substantial extension of the {\tt
@@ -64,13 +64,21 @@ Once you have been able to successfully compile this program, please make sure t
 provided Java files, making sure that you and your partner can draw a diagram to explain how they are related. You
 should also carefully study the {\tt build.xml} file so that you can learn about all of the features that it provides.
 Now, you are ready to run the program by typing the command ``{\tt ant run}'' in your terminal window. What output does
-this produce? What is the meaning of this output? You and your partner should examine this output discussing it so as to
+this produce? What is the meaning of this output? You and your partner should examine this output, discussing it so as to
 ensure that you both understand its meaning. Even though this program is designed to perform an experiment to evaluate
 the performance of array reversal as implemented in the {\tt public static <T> void reverse(T[] data)} method, you will
 notice that it does not currently produce any output so that you can verify that the reversal is working correctly. To
 ensure that the program reverses arrays in the right way, you should modify some of the existing code so that it
 produces debugging output for arrays that are small enough so that you can check the correctness of their reversal. Is
 the program correctly reversing the arrays? If not, please fix the provided source code.
+
+After you have studied the output, you and your partner will have noticed that it runs the method under study for
+multiple trials and reports arithmetic means and standard deviations of the recorded timings. For this assignment, you
+can use the standard deviation values as a way to characterize the amount of dispersion in your results. Intuitively, if
+the timings are very dispersed, then this is an indication that the execution of some background processes may be
+``contaminating'' your results. Now, draw your attention to the fact that the program does not currently calculate a
+standard deviation for all of the data that it collects --- you and your partner should add in extra calls to the
+{\tt public static double calculateStandardDeviation(Long[] timings)} in every location where you think it is needed.
 
 \section*{Evaluating the Performance of Array Reversal}
 

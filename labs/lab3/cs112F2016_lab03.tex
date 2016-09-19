@@ -77,8 +77,12 @@ multiple trials and reports arithmetic means and standard deviations of the reco
 can use the standard deviation values as a way to characterize the amount of dispersion in your results. Intuitively, if
 the timings are very dispersed, then this is an indication that the execution of some background processes may be
 ``contaminating'' your results. Now, draw your attention to the fact that the program does not currently calculate a
-standard deviation for all of the data that it collects --- you and your partner should add in extra calls to the
-{\tt public static double calculateStandardDeviation(Long[] timings)} in every location where you think it is needed.
+standard deviation for all of the data that it collects --- you and your partner should add in calls to the {\tt public
+static double calculateStandardDeviation(Long[] timings)} in every location where you think it is needed.  Now, use the
+Ant build system to re-compile and re-run the {\tt ReverseArrayExperiment} to ensure that it is producing the intended
+output. Finally, you should add in additional code to this program so that it uses classes like {\tt
+java.text.DecimalFormat} to format the standard deviations in the output to only display two decimal places. Please see
+the course instructor or a teaching assistant if you and your partner cannot complete this step.
 
 \section*{Evaluating the Performance of Array Reversal}
 

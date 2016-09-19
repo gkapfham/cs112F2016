@@ -12,10 +12,10 @@ The Java programming language allows for the implementation of methods that are 
 they can process a wide variety of input types. In this laboratory assignment, you will investigate the use of Java's
 casting and generics features. Additionally, you will learn more about Java's support for nested classes and the way in
 which these classes support the implementation of elegant programs. Moreover, you will continue to practice conducting
-experiments that evaluate the performance of an algorithm implemented in Java. In particular, you will explore about to
+experiments that evaluate the performance of an algorithm implemented in Java. In particular, you will explore how to
 use random number generation to better support the performance evaluation of algorithms that process large input arrays.
-Finally, you will learn how to use new software engineering tools, such as Ant build systems, that enable you to
-compile and run large systems.
+Finally, you will learn how to use new software engineering tools, such as Ant build systems, that enable you to compile
+and run large systems.
 
 \section*{Reading Assignment}
 
@@ -27,23 +27,24 @@ that we have discussed during our recent class sessions. If you have questions a
 material that was presented in class, then please see the instructor or a teaching assistant. If done appropriately, you
 may post your question to the {\tt \#laboratory} channel of our Slack team.
 
-\section*{Compiling, Running, and Repairing a Java Program}
+\section*{Building and Running a Java Program}
 
-This laboratory assignment is inspired by programming project P-1.26 on page 57 of your textbook. Instead of requiring
-you to start this assignment ``from scratch'' I have begun an implementation and placed it in the ``share'' repository
-for our couurse. To start this assignment, please use your terminal window to navigate to the share repository and then
-run the ``{\tt git pull}'' command. Now, you should see that you have three source code files, with a {\tt main}
-method located in the class called {\tt SentencesReverser}. Please use the Java compiler and virtual machine to run this
-program in your terminal window. At this point, you should see that it produces the following output:
+In a previous laboratory assignment, you implemented and empirically evaluated the performance of an algorithm for
+reversing the contents of an array. In this laboratory assignment, you will study a substantial extension of the {\tt
+GenericsDemo} example on page 95 of your textbook that reverses a ``generic'' data array of type {\tt T[]}. Instead of
+requiring you to start this assignment ``from scratch'' I have begun an implementation and placed it in the ``share''
+repository for our course. To start this assignment, please use your terminal window to navigate to the share repository
+and then run the ``{\tt git pull}'' command. You will notice that this type the source code is organized into the {\tt
+src} directory and there is an Ant {\tt build.xml} file that allows for the automated building and running of the
+provided source code. To use this file, you can type ``{\tt ant compile}'' in your terminal window. At this point, you
+should see that it produces output similar to that which is shown below:
 
 \begin{verbatim}
-Strings, Wrappers, Arrays, and Enum Types
-Increment and Decrement Operators
-Type Conversions
-An Example Program
-Exception in thread "main" java.lang.NullPointerException
-        at Sentences.printSentences(Sentences.java:33)
-        at SentencesReverser.main(SentencesReverser.java:12)
+Buildfile: /home/gkapfham/working/teaching/cs112F2016/src/mine/labs/lab3/build.xml
+compile:
+[javac] Compiling 3 source files to /home/gkapfham/working/teaching/cs112F2016/...
+BUILD SUCCESSFUL
+Total time: 1 second
 \end{verbatim}
 
 This output clearly indicates that there is a defect in at least one of the three Java class files that I have provided

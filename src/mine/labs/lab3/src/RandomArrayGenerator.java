@@ -4,9 +4,11 @@ public class RandomArrayGenerator {
 
 public static class ArrayPrinter {
 
-  public static <T> void print(T[] data, String indent) {
-    for(int i = 0; i < data.length; i++) {
-      System.out.println(indent + data[i]);
+  public static <T> void print(T[] data, String indent, boolean debug) {
+    if(debug) {
+      for(int i = 0; i < data.length; i++) {
+        System.out.println(indent + data[i]);
+      }
     }
   }
 
@@ -36,8 +38,9 @@ public static Float[] generateRandomFloatArray(int size) {
 
 public static void main(String[] args) {
   String indentation = new String("  ");
+  boolean debug = true;
   Integer[] example = RandomArrayGenerator.generateRandomIntegerArray(10);
-  ArrayPrinter.print(example, indentation);
+  ArrayPrinter.print(example, indentation, debug);
 }
 
 }

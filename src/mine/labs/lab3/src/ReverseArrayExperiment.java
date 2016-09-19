@@ -11,7 +11,7 @@ public class ReverseArrayExperiment {
 
   public static void main(String[] args) {
     String indentation = new String("  ");
-    boolean debug = true;
+    boolean debug = false;
     int size = 100;
 
     System.out.println("Timing Random Integer[]\n");
@@ -25,6 +25,7 @@ public class ReverseArrayExperiment {
 
     System.out.println();
     RandomArrayGenerator.ArrayPrinter.print(randomIntegerArray, indentation, debug);
+    System.out.println();
 
     System.out.println("\nTiming Random Float[]\n");
     Float[] randomFloatArray = new Float[size];

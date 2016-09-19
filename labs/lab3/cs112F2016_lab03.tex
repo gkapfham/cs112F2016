@@ -27,6 +27,17 @@ that we have discussed during our recent class sessions. If you have questions a
 material that was presented in class, then please see the instructor or a teaching assistant. If done appropriately, you
 may post your question to the {\tt \#laboratory} channel of our Slack team.
 
+\section*{Configuring Git and Bitbucket with your Partner}
+
+During this laboratory assignment, you will securely communicate with the Bitbucket.org servers that will host all of
+our projects.  If you are still having trouble using Bitbucket, you should refer to the following web site for
+additional information: \url{https://confluence.atlassian.com/display/BITBUCKET/Bitbucket+101}.  For this assignment,
+you are responsible for working with a partner to implement all of the required programs, conduct the necessary
+experiments, and write a report of your results. For this laboratory assignment, you may pick your own partner, provided
+that you do not work with the same person as you did from a previous assignment. Once you have picked your partner and
+reviewed the entire assignment sheet, please create a Bitbucket repository according to the naming convention {\tt
+cs112F2016-lab03-<user name one>-<user name two>}.
+
 \section*{Building and Running a Java Program}
 
 In a previous laboratory assignment, you implemented and empirically evaluated the performance of an algorithm for
@@ -47,57 +58,8 @@ BUILD SUCCESSFUL
 Total time: 1 second
 \end{verbatim}
 
-This output clearly indicates that there is a defect in at least one of the three Java class files that I have provided
-to you! Before going further with this assignment, please find and fix this defect. The output provided above should
-draw your attention to line 33 of the {\tt printSentences} method in the {\tt Sentences} class. Once you have repaired
-the Java program, you should carefully study the source code of the three Java classes so that you better understand how
-the program works and how the three classes help to solve programming project P-1.26. You should also try to
-conceptualize what an instance of the {\tt Sentences} class looks like in the computer's memory. Once you better
-understand the design and implementation of the {\tt SentencesReverser} program, then you are ready to extend it with
-the feature that is requested on page 57 of your textbook.
+\section*{Evaluating the Performance of Array Reversal}
 
-As it is currently implemented, {\tt SentencesReverser} inputs a list of sentences from a text file called {\tt
-sentences.txt} and then displays them to the terminal window. However, the description of the programming project
-requires you to ``write them to standard output in reverse order'' with the further explanation that ``each line is
-output in the correct order, but the ordering of the lines is reversed''. This means that first line in the {\tt
-sentences.txt} file should now be the last line output by the {\tt SentencesReverser} program. If you look into the
-source code of the {\tt Sentences} class you will see that there is a {\tt reverseSentences()} method that is not yet
-implemented. Please add your own implementation of this method, testing it with different inputs to ensure that it is
-working correctly. You may talk with a teaching assistant or the course instructor if you have questions.
-
-\section*{Evaluating the Performance of Iteration}
-
-The final version of the {\tt SentencesReverser} program operates in several distinct phases: first, it inputs sentences
-from the {\tt sentences.txt} file; second, it reverses all of the sentences stored in the {\tt private Sentence[]
-sentences} instance variable; third it outputs all of the sentences by calling the {\tt printSentences} method. For the
-last part of this laboratory assignment, you should modify your program so that it collects timing information for each
-of these three phases. Please note that, since these phases occur ``inside of'' the Java program, we cannot employ the
-timing method that you learned in class. That is, running the program with {\tt /usr/bin/time} in front of the call to
-the Java virtual machine will not allow us to collect timings at the desired level of granularity. Instead, you will
-need to surround calls to the methods that you want to profile with calls to the {\tt currentTimeMillis()} method in the
-{\tt java.lang.System} class, as shown in this code segment.
-
-\begin{verbatim}
-    long beforeRead = System.currentTimeMillis();
-    sentences.readSentencesFromFile();
-    long afterRead = System.currentTimeMillis();
-    System.out.println("Read time: " + (afterRead - beforeRead));
-\end{verbatim}
-
-At this point in the assignment, you should follow the pattern in the previous code segment to time the three phases of
-the {\tt SentencesReverser} program. To accomplish this task, you may want to declare a total of six variables that will
-respectively track the time before and after the execution of the methods subject to performance evaluation. For
-instance, to time the {\tt readSentencesFromFile()} method the previous code segment declared the variables called {\tt
-beforeRead} and {\tt afterRead} and then used the equation ``{\tt afterRead - beforeRead}'' to calculated the time that
-elapsed when running the {\tt readSentencesFromFile()} method.
-
-Once you have added all of the source code needed to record the execution time of the three phases of the {\tt
-SentencesReverser} program, you are ready to conduct an experiment to evaluate the performance of iteration in a Java
-program. As we have learned during our classroom discussions, you must carefully design your experiment so as to ensure
-that you are measuring what you desire to study. For instance, you should conduct your experiment by varying the number
-of sentences in the {\tt sentences.txt} file and then running multiple trials of the {\tt SentencesReverser}. Then, you
-will need to record the program's output into a data table organized according to the number of sentences in the text
-file and the timings for the three phases (i.e., read, reverse, and print).
 
 \section*{Carefully Review the Honor Code}
 

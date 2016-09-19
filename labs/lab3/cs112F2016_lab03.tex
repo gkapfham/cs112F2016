@@ -50,6 +50,8 @@ src} directory and there is an Ant {\tt build.xml} file that allows for the auto
 provided source code. To use this file, you can type ``{\tt ant compile}'' in your terminal window. At this point, you
 should see that it produces output similar to that which is shown below:
 
+\vspace*{-.1in}
+
 \begin{verbatim}
 Buildfile: /home/gkapfham/working/teaching/cs112F2016/src/mine/labs/lab3/build.xml
 compile:
@@ -83,6 +85,18 @@ Ant build system to re-compile and re-run the {\tt ReverseArrayExperiment} to en
 output. Finally, you should add in additional code to this program so that it uses classes like {\tt
 java.text.DecimalFormat} to format the standard deviations in the output to only display two decimal places. Please see
 the course instructor or a teaching assistant if you and your partner cannot complete this step.
+
+You will also notice that, as it is currently implemented, the {\tt ReverseArrayExperiment} performs a performance
+evaluation of array reversal with arrays of type {\tt Integer} and {\tt Float}. To complete this task, it uses the
+methods in the {\tt RandomArrayGenerator} class to automatically, and randomly, create {\tt Integer} and {\tt Float}
+arrays of a specified size. You and your partner should also study this Java class to ensure that you understand how it
+works. Now, you should extend it so that it also generates random instances of the {\tt CreditCard} class that have
+random values for the {\tt lim} and {\tt balance} parameters to the class's constructor. Finally, you will recall that
+the {\tt CreditCard} class from a prior laboratory assignment was placed in a Java package. To ensure that this Java
+class correctly integrates with all of the other provided source code, you should place the {\tt ArrayPrinter}, {\tt
+RandomArrayGenerator}, and {\tt ReverseArrayExperiment} classes in the {\tt edu.allegheny.experiment} package, adjusting
+the source code and the directory structure accordingly. Please see the instructor or a teaching assistant if you have
+questions about this step.
 
 \section*{Evaluating the Performance of Array Reversal}
 
@@ -155,8 +169,9 @@ This assignment invites you to submit both a printed and an electronic version o
 
 \vspace*{-.05in}
 
-Before you turn in this assignment, you also must ensure that the course instructor has read access to your personal
-Bitbucket repository that is named according to the convention {\tt cs112F2016-<your user name>}. Please see the course
-instructor if you have questions about this assignment.
+Before you turn in this assignment, you must ensure that the course instructor has read access to your Bitbucket
+repository that is named according to the convention {\tt cs112F2016-lab01-<user name one>-<user name two>} (you can
+adjust the name for a team of three students). Please note that each team in the class is responsible for submitting one
+version of this assignment.
 
 \end{document}

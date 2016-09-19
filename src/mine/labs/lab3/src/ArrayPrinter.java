@@ -6,9 +6,6 @@ public class ArrayPrinter {
         System.out.println(indent + data[i]);
       }
     }
-    else {
-      System.out.print(indent + " ... elided array ...");
-    }
   }
 
 }

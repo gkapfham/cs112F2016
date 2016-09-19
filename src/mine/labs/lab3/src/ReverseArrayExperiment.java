@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.Collections;
+
 public class ReverseArrayExperiment {
 
   public static <T> void reverse(T[] data) {
@@ -13,11 +16,12 @@ public class ReverseArrayExperiment {
     String indentation = new String("  ");
     boolean debug = false;
     boolean always = true;
-    int size = 100;
+    int size = 1000;
     int trials = 10;
 
     Long[] integerTimings = new Long[trials];
     Long[] floatTimings = new Long[trials];
+    Long[] integerTimingsProvided = new Long[trials];
 
     System.out.println("Timing Random Integer[]\n");
     Integer[] randomIntegerArray = new Integer[size];
@@ -29,6 +33,13 @@ public class ReverseArrayExperiment {
       ReverseArray.reverse(randomIntegerArray);
       long afterIntegerReverse = System.nanoTime();
       integerTimings[i] = new Long(afterIntegerReverse - beforeIntegerReverse);
+    }
+
+    for(int i = 0; i < trials; i++) {
+      long beforeIntegerReverse = System.nanoTime();
+      Collections.reverse(Arrays.asList(randomIntegerArray));
+      long afterIntegerReverse = System.nanoTime();
+      integerTimingsProvided[i] = new Long(afterIntegerReverse - beforeIntegerReverse);
     }
 
     System.out.println();
@@ -53,9 +64,15 @@ public class ReverseArrayExperiment {
 
     System.out.println("Timing Results:");
     System.out.println();
+
     System.out.println("Integer reversal (ns):");
     ArrayPrinter.print(integerTimings, indentation, always);
     System.out.println();
+
+    System.out.println("Integer reversal provided (ns):");
+    ArrayPrinter.print(integerTimingsProvided, indentation, always);
+    System.out.println();
+
     System.out.println("Float reversal (ns): ");
     ArrayPrinter.print(floatTimings, indentation, always);
 

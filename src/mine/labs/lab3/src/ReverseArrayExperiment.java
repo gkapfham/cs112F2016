@@ -16,12 +16,12 @@ public class ReverseArrayExperiment {
 
     System.out.println("Timing Random Integer[]\n");
     Integer[] randomIntegerArray = new Integer[size];
-    randomIntegerArray = RandomArrayGenerator.generateRandomIntegerArray(10);
+    randomIntegerArray = RandomArrayGenerator.generateRandomIntegerArray(size);
     RandomArrayGenerator.ArrayPrinter.print(randomIntegerArray, indentation, debug);
 
-    long beforeIntReverse = System.nanoTime();
+    long beforeIntegerReverse = System.nanoTime();
     ReverseArray.reverse(randomIntegerArray);
-    long afterIntReverse = System.nanoTime();
+    long afterIntegerReverse = System.nanoTime();
 
     System.out.println();
     RandomArrayGenerator.ArrayPrinter.print(randomIntegerArray, indentation, debug);
@@ -29,15 +29,20 @@ public class ReverseArrayExperiment {
 
     System.out.println("\nTiming Random Float[]\n");
     Float[] randomFloatArray = new Float[size];
-    randomFloatArray = RandomArrayGenerator.generateRandomFloatArray(10);
+    randomFloatArray = RandomArrayGenerator.generateRandomFloatArray(size);
     RandomArrayGenerator.ArrayPrinter.print(randomFloatArray, indentation, debug);
 
     long beforeFloatReverse = System.nanoTime();
     ReverseArray.reverse(randomFloatArray);
-    long aferFloatReverse = System.nanoTime();
+    long afterFloatReverse = System.nanoTime();
 
     System.out.println();
     RandomArrayGenerator.ArrayPrinter.print(randomFloatArray, indentation, debug);
+    System.out.println("\n");
+
+    System.out.println("Timing Results:");
+    System.out.println("Integer reversal (ns): " + (afterIntegerReverse - beforeIntegerReverse));
+    System.out.println("Float reversal (ns): " + (afterFloatReverse - beforeFloatReverse));
 
   }
 

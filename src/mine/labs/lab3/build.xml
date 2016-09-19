@@ -29,4 +29,21 @@
     </javac>
   </target>
 
+    <!-- RUNNING TARGETS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+     <!--RUNNING TASK - "ant run" -->
+    <target name="run">
+        <antcall target="RunExperiment">
+        </antcall>
+    </target>
+
+     <!--RUNNING TASK - "ant RunExperiment" -->
+    <target name="RunExperiment" depends="compile">
+        <java fork="true" classname="ReverseArrayExperiment" maxmemory="3072m">
+            <classpath refid="build.classpath" />
+            <arg value="" />
+        </java>
+    </target>
+
+
 </project>

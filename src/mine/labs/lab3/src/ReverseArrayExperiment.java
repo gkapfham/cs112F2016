@@ -5,6 +5,27 @@ public class ReverseArrayExperiment {
 
 private static class StatisticsCalculator {
 
+  public static long calculateArithmeticMean(Long[] timings) {
+    long runningTotal = 0;
+    for(int i = 0; i < timings.length; i++) {
+      runningTotal = runningTotal + timings[i];
+    }
+    return runningTotal / (long)timings.length;
+  }
+
+  public static long calculateVariance(Long[] timings) {
+    long arithmeticMean = calculateArithmeticMean(timings);
+    long runningTotal = 0;
+    for(int i = 0; i < timings.length; i++) {
+      runningTotal = (timings[i] - arithmeticMean) * (timings[i] - arithmeticMean);
+    }
+    return runningTotal / (long)timings.length;
+  }
+
+  public static double calculateStandardDeviation(Long[] timings) {
+    return Math.sqrt(calculateVariance(timings));
+  }
+
 }
 
   public static <T> void reverse(T[] data) {
@@ -91,18 +112,23 @@ private static class StatisticsCalculator {
 
     System.out.println("Integer Reversal Provided (ns):");
     ArrayPrinter.print(integerTimings, indentation, always);
+    System.out.println(indentation + "Arithmetic Mean (ns): " + StatisticsCalculator.calculateArithmeticMean(integerTimings));
+    System.out.println(indentation + "Standard Deviation (ns): " + StatisticsCalculator.calculateStandardDeviation(integerTimings));
     System.out.println();
 
     System.out.println("Integer Reversal Collections (ns):");
     ArrayPrinter.print(integerTimingsCollections, indentation, always);
+    System.out.println(indentation + "Arithmetic Mean (ns): " + StatisticsCalculator.calculateArithmeticMean(integerTimingsCollections));
     System.out.println();
 
     System.out.println("Float Reversal Provided (ns): ");
     ArrayPrinter.print(floatTimings, indentation, always);
+    System.out.println(indentation + "Arithmetic Mean (ns): " + StatisticsCalculator.calculateArithmeticMean(floatTimings));
     System.out.println();
 
     System.out.println("Float Reversal Collections (ns): ");
     ArrayPrinter.print(floatTimingsCollections, indentation, always);
+    System.out.println(indentation + "Arithmetic Mean (ns): " + StatisticsCalculator.calculateArithmeticMean(floatTimingsCollections));
 
   }
 

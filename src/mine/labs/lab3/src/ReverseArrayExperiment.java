@@ -3,30 +3,30 @@ import java.util.Collections;
 
 public class ReverseArrayExperiment {
 
-private static class StatisticsCalculator {
+  private static class StatisticsCalculator {
 
-  public static long calculateArithmeticMean(Long[] timings) {
-    long runningTotal = 0;
-    for(int i = 0; i < timings.length; i++) {
-      runningTotal = runningTotal + timings[i];
+    public static long calculateArithmeticMean(Long[] timings) {
+      long runningTotal = 0;
+      for(int i = 0; i < timings.length; i++) {
+        runningTotal = runningTotal + timings[i];
+      }
+      return runningTotal / (long)timings.length;
     }
-    return runningTotal / (long)timings.length;
-  }
 
-  public static long calculateVariance(Long[] timings) {
-    long arithmeticMean = calculateArithmeticMean(timings);
-    long runningTotal = 0;
-    for(int i = 0; i < timings.length; i++) {
-      runningTotal = (timings[i] - arithmeticMean) * (timings[i] - arithmeticMean);
+    public static long calculateVariance(Long[] timings) {
+      long arithmeticMean = calculateArithmeticMean(timings);
+      long runningTotal = 0;
+      for(int i = 0; i < timings.length; i++) {
+        runningTotal = (timings[i] - arithmeticMean) * (timings[i] - arithmeticMean);
+      }
+      return runningTotal / (long)timings.length;
     }
-    return runningTotal / (long)timings.length;
-  }
 
-  public static double calculateStandardDeviation(Long[] timings) {
-    return Math.sqrt(calculateVariance(timings));
-  }
+    public static double calculateStandardDeviation(Long[] timings) {
+      return Math.sqrt(calculateVariance(timings));
+    }
 
-}
+  }
 
   public static <T> void reverse(T[] data) {
     int low = 0, high = data.length - 1;

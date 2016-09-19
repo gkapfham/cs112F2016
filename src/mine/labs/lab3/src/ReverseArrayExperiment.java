@@ -58,7 +58,7 @@ private static class StatisticsCalculator {
     System.out.print(indentation);
     for(int i = 0; i < trials; i++) {
       long beforeIntegerReverse = System.nanoTime();
-      ReverseArray.reverse(randomIntegerArray);
+      ReverseArrayExperiment.reverse(randomIntegerArray);
       long afterIntegerReverse = System.nanoTime();
       integerTimings[i] = new Long(afterIntegerReverse - beforeIntegerReverse);
       System.out.print(".");
@@ -87,7 +87,7 @@ private static class StatisticsCalculator {
     System.out.print(indentation);
     for(int i = 0; i < trials; i++) {
       long beforeFloatReverse = System.nanoTime();
-      ReverseArray.reverse(randomFloatArray);
+      ReverseArrayExperiment.reverse(randomFloatArray);
       long afterFloatReverse = System.nanoTime();
       floatTimings[i] = afterFloatReverse - beforeFloatReverse;
       System.out.print(".");

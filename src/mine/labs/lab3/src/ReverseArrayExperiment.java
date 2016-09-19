@@ -11,23 +11,32 @@ public class ReverseArrayExperiment {
 
   public static void main(String[] args) {
     String indentation = new String("  ");
+    boolean debug = true;
     int size = 100;
 
-    System.out.println("Random Integer[]\n");
+    System.out.println("Timing Random Integer[]\n");
     Integer[] randomIntegerArray = new Integer[size];
     randomIntegerArray = RandomArrayGenerator.generateRandomIntegerArray(10);
-    RandomArrayGenerator.ArrayPrinter.print(randomIntegerArray, indentation);
-    ReverseArray.reverse(randomIntegerArray);
-    System.out.println();
-    RandomArrayGenerator.ArrayPrinter.print(randomIntegerArray, indentation);
+    RandomArrayGenerator.ArrayPrinter.print(randomIntegerArray, indentation, debug);
 
-    System.out.println("\nRandom Float[]\n");
+    long beforeIntReverse = System.nanoTime();
+    ReverseArray.reverse(randomIntegerArray);
+    long afterIntReverse = System.nanoTime();
+
+    System.out.println();
+    RandomArrayGenerator.ArrayPrinter.print(randomIntegerArray, indentation, debug);
+
+    System.out.println("\nTiming Random Float[]\n");
     Float[] randomFloatArray = new Float[size];
     randomFloatArray = RandomArrayGenerator.generateRandomFloatArray(10);
-    RandomArrayGenerator.ArrayPrinter.print(randomFloatArray, indentation);
+    RandomArrayGenerator.ArrayPrinter.print(randomFloatArray, indentation, debug);
+
+    long beforeFloatReverse = System.nanoTime();
     ReverseArray.reverse(randomFloatArray);
+    long aferFloatReverse = System.nanoTime();
+
     System.out.println();
-    RandomArrayGenerator.ArrayPrinter.print(randomFloatArray, indentation);
+    RandomArrayGenerator.ArrayPrinter.print(randomFloatArray, indentation, debug);
 
   }
 

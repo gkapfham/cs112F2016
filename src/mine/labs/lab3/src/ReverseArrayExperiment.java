@@ -12,37 +12,52 @@ public class ReverseArrayExperiment {
   public static void main(String[] args) {
     String indentation = new String("  ");
     boolean debug = false;
+    boolean always = true;
     int size = 100;
+    int trials = 10;
+
+    Long[] integerTimings = new Long[trials];
+    Long[] floatTimings = new Long[trials];
 
     System.out.println("Timing Random Integer[]\n");
     Integer[] randomIntegerArray = new Integer[size];
     randomIntegerArray = RandomArrayGenerator.generateRandomIntegerArray(size);
-    RandomArrayGenerator.ArrayPrinter.print(randomIntegerArray, indentation, debug);
+    ArrayPrinter.print(randomIntegerArray, indentation, debug);
 
-    long beforeIntegerReverse = System.nanoTime();
-    ReverseArray.reverse(randomIntegerArray);
-    long afterIntegerReverse = System.nanoTime();
+    for(int i = 0; i < trials; i++) {
+      long beforeIntegerReverse = System.nanoTime();
+      ReverseArray.reverse(randomIntegerArray);
+      long afterIntegerReverse = System.nanoTime();
+      integerTimings[i] = new Long(afterIntegerReverse - beforeIntegerReverse);
+    }
 
     System.out.println();
-    RandomArrayGenerator.ArrayPrinter.print(randomIntegerArray, indentation, debug);
+    ArrayPrinter.print(randomIntegerArray, indentation, debug);
     System.out.println();
 
     System.out.println("\nTiming Random Float[]\n");
     Float[] randomFloatArray = new Float[size];
     randomFloatArray = RandomArrayGenerator.generateRandomFloatArray(size);
-    RandomArrayGenerator.ArrayPrinter.print(randomFloatArray, indentation, debug);
+    ArrayPrinter.print(randomFloatArray, indentation, debug);
 
-    long beforeFloatReverse = System.nanoTime();
-    ReverseArray.reverse(randomFloatArray);
-    long afterFloatReverse = System.nanoTime();
+    for(int i = 0; i < trials; i++) {
+      long beforeFloatReverse = System.nanoTime();
+      ReverseArray.reverse(randomFloatArray);
+      long afterFloatReverse = System.nanoTime();
+      floatTimings[i] = afterFloatReverse - beforeFloatReverse;
+    }
 
     System.out.println();
-    RandomArrayGenerator.ArrayPrinter.print(randomFloatArray, indentation, debug);
+    ArrayPrinter.print(randomFloatArray, indentation, debug);
     System.out.println("\n");
 
     System.out.println("Timing Results:");
-    System.out.println("Integer reversal (ns): " + (afterIntegerReverse - beforeIntegerReverse));
-    System.out.println("Float reversal (ns): " + (afterFloatReverse - beforeFloatReverse));
+    System.out.println();
+    System.out.println("Integer reversal (ns):");
+    ArrayPrinter.print(integerTimings, indentation, always);
+    System.out.println();
+    System.out.println("Float reversal (ns): ");
+    ArrayPrinter.print(floatTimings, indentation, always);
 
   }
 

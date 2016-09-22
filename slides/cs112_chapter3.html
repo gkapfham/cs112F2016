@@ -62,11 +62,11 @@ if( window.location.search.match( /print-pdf/gi ) ) {
         </section>
 
         <section>
-          <h1 id="what_is_an_array?">What is an Array?</h1>
+          <h1 id="what_is_an_array?"><b class="green">What is an Array?</b></h1>
         </section>
 
         <section>
-          <h1 id="motivation_for_using_arrays">Motivation for Using Arrays</h1>
+          <h1 id="motivation_for_using_arrays"><b class="orange">Motivation for Using Arrays</b></h1>
         </section>
 
         <section>
@@ -74,9 +74,48 @@ if( window.location.search.match( /print-pdf/gi ) ) {
           <p class="fragment"><b class="orange">An array stores a list of values</b></p>
           <p class="fragment"><b class="orange">The number corresponding to each position is the index</b></p>
           <p class="fragment"><b class="orange">An array of size N is indexed from 0 to N-1</b></p>
-          <p class="fragment"><b class="blue">Refer to the example in Figure 8.1 on page 380!</b></p>
           <p class="fragment"><b class="green">Why do we start the index at the value of 0?</b></p>
         </section>
+
+        <section>
+          <h1 id="array_bounds_checking">Array Bounds Checking</h1>
+          <p class="fragment"><b class="orange">Ensures that the index is within the array</b></p>
+          <p class="fragment"><b class="green">Why is this important to perform?</b></p>
+          <p class="fragment">Let's avoid buffer overflow attacks!</p>
+          <p class="fragment">Also, enables the detection of program defects</p>
+          <p class="fragment"><b class="green">Can this be fully done at compile time?</b></p>
+          <p class="fragment"><b class="green">What are the associated overheads?</b></p>
+        </section>
+
+        <section>
+          <h1 id="array_details">Array Details</h1>
+          <p class="fragment"><b class="green">How do we declare an array?</b></p>
+          <p class="fragment"><code>int[] grades;</code> and <code>int grades[];</code> are both acceptable</p>
+          <p class="fragment">Be consistent when you are implementing your programs!</p>
+          <p class="fragment"><b class="green">How do we initialize an array to specific values?</b></p>
+          <p class="fragment"><code>int[] scores = {87, 98, 60, 80};</code></p>
+        </section>
+
+        <section>
+          <h1 id="arrays_as_parameters">Arrays as Parameters</h1>
+          <p class="fragment"><b class="green">What method always accepts an array as a parameter?</b></p>
+          <p class="fragment">An array as a parameter can be modified</p>
+          <p class="fragment">You can change the contents of the array</p>
+          <p class="fragment">You cannot make the array refer to another array</p>
+        </section>
+
+        <section>
+          <h1 id="command-line_arguments">Command-Line Arguments</h1>
+          <p class="fragment"><b class="green">Are there other ways to give a program input?</b></p>
+          <p class="fragment">Yes! You can input command-line arguments.</p>
+          <p class="fragment">Did you ever notice that <code>main</code> has a parameter?</p>
+          <p class="fragment">What is the purpose of <code>String[] args</code>?</p>
+        </section>
+
+        <section>
+          <h1>Let's try an example!</h1>
+        </section>
+
 
       </div>
 

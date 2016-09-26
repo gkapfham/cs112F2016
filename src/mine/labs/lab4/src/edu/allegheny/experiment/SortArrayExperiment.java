@@ -3,13 +3,15 @@ package edu.allegheny.experiment;
 import java.util.Arrays;
 import java.util.Collections;
 
+import dsaj.arrays.InsertionSort;
+
 public class SortArrayExperiment {
 
   private static class StatisticsCalculator {
 
     public static long calculateArithmeticMean(Long[] timings) {
       long runningTotal = 0;
-      for(int i = 0; i < timings.length; i++) {
+      for (int i = 0; i < timings.length; i++) {
         runningTotal = runningTotal + timings[i];
       }
       return runningTotal / (long)timings.length;
@@ -18,7 +20,7 @@ public class SortArrayExperiment {
     public static long calculateVariance(Long[] timings) {
       long arithmeticMean = calculateArithmeticMean(timings);
       long runningTotal = 0;
-      for(int i = 0; i < timings.length; i++) {
+      for (int i = 0; i < timings.length; i++) {
         runningTotal = (timings[i] - arithmeticMean) * (timings[i] - arithmeticMean);
       }
       return runningTotal / (long)timings.length;
@@ -58,7 +60,7 @@ public class SortArrayExperiment {
 
     System.out.println("Provided Trials: ");
     System.out.print(indentation);
-    for(int i = 0; i < trials; i++) {
+    for (int i = 0; i < trials; i++) {
       long beforeIntegerReverse = System.nanoTime();
       SortArrayExperiment.reverse(randomIntegerArray);
       long afterIntegerReverse = System.nanoTime();
@@ -97,7 +99,7 @@ public class SortArrayExperiment {
 
     System.out.println("\nCollections Trials: ");
     System.out.print(indentation);
-    for(int i = 0; i < trials; i++) {
+    for (int i = 0; i < trials; i++) {
       long beforeFloatReverse = System.nanoTime();
       Collections.reverse(Arrays.asList(randomFloatArray));
       long afterFloatReverse = System.nanoTime();

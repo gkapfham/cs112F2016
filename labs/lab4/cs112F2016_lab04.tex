@@ -74,6 +74,7 @@ realize that the source code of the {\tt main} method in {\tt SortingArrayExperi
 maintain and understand. In the final part of this phase of the assignment, you and your partner should apply the
 principles of object-oriented design to ``refactor'' the {\tt SortingArrayExperiment} to that it is easier to
 understand. Why do you and your partner think that your program's new design is an improvement over the old one?
+Whenever possible, you should use the principles developed in Chapter 2 to justify your decisions.
 
 \section*{Evaluating the Performance of Array Reversal}
 
@@ -88,13 +89,14 @@ these algorithms, you should develop an intuition about how their structure will
 of the input array varies from very small to very large. Finally, you should conduct experiments to answer the following
 two research questions.
 
-\noindent {\em RQ1: How does the data type of an array influence the performance of the array reversal method?\/} To
+\noindent {\em RQ1: How does the data type of an array influence the performance of the array sorting method?\/} To
 answer this research question, you should run the {\tt ReverseArrayExperiment} class for a suitable number of trials and
-record the timings when the array reversal method accepts arrays of type {\tt Integer}, {\tt Float}, and {\tt
-CreditCard}; you and your partner are also encouraged to investigate other data types as you deem appropriate. Your
-response to this research question should leverage the timings and their arithmetic means and standard deviations,
-particularly focusing on which array data type leads to the fastest and least-variable method for array reversal.
-Whenever possible, you should note the key trends and, additionally, explain why they are evident in your data set.
+record the timings when the array reversal method accepts arrays of type {\tt Character} and at least one of another
+primitive data type like {\tt Float} or {\tt Integer}; you and your partner are also encouraged to investigate other
+data types as you deem appropriate. Your response to this research question should leverage the timings and their
+arithmetic means and standard deviations, particularly focusing on which array data type leads to the fastest and
+least-variable method for array reversal.  Whenever possible, you should note the key trends and, additionally, explain
+why they are evident in your data set.
 
 \noindent {\em RQ2: Is it faster to reverse an array using a ``hand-coded'' method or the one furnished by the Java
 language?\/} To answer this research question, you should run the {\tt ReverseArrayExperiment} class for a suitable number

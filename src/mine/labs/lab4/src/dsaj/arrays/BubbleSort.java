@@ -7,7 +7,7 @@ public class BubbleSort {
     for (int i = 0; i < length; i++) {
       for (int j = 1; j < (length - i); j++) {
         if (data[j - 1] > data[j]) {
-          char temporary = data[j];
+          char temporary = data[j - 1];
           data[j - 1] = data[j];
           data[j] = temporary;
         }

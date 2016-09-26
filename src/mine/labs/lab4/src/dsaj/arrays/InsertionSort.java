@@ -24,7 +24,6 @@ package dsaj.arrays;
 
 public class InsertionSort {
 
-  /** Insertion-sort of an array of characters into nondecreasing order */
   public static void insertionSort(Character[] data) {
     int n = data.length;
     for (int k = 1; k < n; k++) {

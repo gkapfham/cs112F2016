@@ -2,13 +2,12 @@ package dsaj.arrays;
 
 public class BubbleSort {
 
-  /** Bubble-sort of an array of characters into nondecreasing order */
   public static void bubbleSort(Character[] data) {
     int length = data.length;
     for (int i = 0; i < length; i++) {
       for (int j = 1; j < (length - i); j++) {
         if (data[j - 1] > data[j]) {
-          char temporary = data[j - 1];
+          char temporary = data[j];
           data[j - 1] = data[j];
           data[j] = temporary;
         }

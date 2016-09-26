@@ -45,17 +45,17 @@ should see the course instructor.
 
 After changing into the ``share'' repository for this course, please run the ``{\tt git pull}'' command to download all
 of the source code and the build system that you will need for this assignment. Once you have been able to successfully
-compile this program, please take time to review the source code of provided Java files, making sure that you and your
-partner can draw a diagram to explain how they are related. You should also carefully study the {\tt build.xml} file so
-that you can learn about all of the features that it provides. Now, you are ready to run the program by typing the
-command ``{\tt ant run}'' in your terminal window. What output does this produce? What is the meaning of this output? Do
-you understand the numbers that the program is outputting? You and your partner should examine this output, discussing
+compile this program, please take time to review the source code of the provided Java files, making sure that you and
+your partner can draw a diagram to explain how they are related. You should also carefully study the {\tt build.xml}
+file so that you can learn about all of the features that it provides. Now, you are ready to run the program by typing
+the command ``{\tt ant run}'' in your terminal. What output does this produce? What is the meaning of this output? Do
+you understand the numbers that the program outputs? You and your partner should examine this output, discussing
 it so as to ensure that you both understand its meaning.
 
 Even though this program is designed to perform an experiment to evaluate the performance of sorting arrays --- as
 implemented in the bubble sort, insertion sort, and {\tt java.util.Arrays.sort} methods --- you will notice that it does
-not currently produce any output so that you can verify that the reversal is working correctly! To ensure that the
-program reverses arrays in the right way, you should modify some of the existing code so that it produces debugging
+not currently produce any output so that you can verify that the sort is working correctly! To ensure that the
+program sorts arrays in the right way, you should modify some of the existing code so that it produces debugging
 output for arrays that are small enough so that you can check the correctness of their sorting. Is the program
 correctly generating and sorting the arrays? If not, you must fix the provided source code. Please see the course
 instructor or a teaching assistant if you are stuck on this debugging step.
@@ -69,12 +69,12 @@ the experiment and the conclusions that you might draw about the performance of 
 
 Next, since you and your partner will see that the {\tt SortArrayExperiment} is currently implemented to only sort
 arrays that contain {\tt Character}s, you should extend it so that it sorts arrays of at least one additional data type,
-such as the {\tt Integer} or the {\tt Float}. Once your team has finished implementing this feature, you will likely
-realize that the source code of the {\tt main} method in {\tt SortArrayExperiment} is becoming long and difficult to
-maintain and understand. In the final part of this phase of the assignment, you and your partner should apply the
-principles of object-oriented design to ``refactor'' the {\tt SortArrayExperiment} to that it is easier to
-understand. Why do you and your partner think that your program's new design is an improvement over the old one?
-Whenever possible, you should use the principles developed in Chapter 2 to justify your decisions.
+such as {\tt Integer} or {\tt Float}. Once your team has finished implementing this feature, you will likely realize
+that the source code of the {\tt main} method in {\tt SortArrayExperiment} is becoming long and difficult to maintain
+and understand. In the final part of this phase of the assignment, you and your partner should apply the principles of
+object-oriented design to ``refactor'' the {\tt SortArrayExperiment} so that it is easier to understand. Why do you and
+your partner think that your program's new design is an improvement over the old one?  Whenever possible, you should
+appeal to the principles developed in Chapter 2 to justify your decisions.
 
 \section*{Experimentally Evaluating the Performance of Array Sorting}
 
@@ -97,19 +97,19 @@ should decide how many trials you will run during your experimental study. Final
 answer the following three research questions.
 
 \noindent {\em RQ1: How does the data type of an array influence the performance of the array sorting method?\/} To
-answer this research question, you should run the {\tt ReverseArrayExperiment} class for a suitable number of trials and
-record the timings when the array sort method accepts arrays of type {\tt Character} and at least one of another
-primitive data type like {\tt Float} or {\tt Integer}; you and your partner are also encouraged to investigate other
-data types as you deem appropriate. Your response to this research question should leverage the timings and their
-arithmetic means and standard deviations, particularly focusing on which array data type leads to the fastest and
-least-variable method for array sorting. You should note the key trends and, additionally, explain why they are evident.
+answer this research question, you should run the {\tt SortArrayExperiment} class for a suitable number of trials and
+record the timings when the array sort method accepts arrays of type {\tt Character} and at least one of another data
+type like {\tt Float} or {\tt Integer}; you and your partner are also encouraged to investigate other data types as you
+deem appropriate. Your response to this research question should leverage the timings and their arithmetic means and
+standard deviations, particularly focusing on which array data type leads to the fastest and least-variable method for
+array sorting. You should note the key trends and, additionally, explain why they are evident.
 
 \noindent {\em RQ2: Is it faster to reverse an array using a ``hand-coded'' method or the one furnished by the Java
 language?\/} To answer this research question, you should run the {\tt SortArrayExperiment} class for a suitable number
-of trials and focus primarily on whether it is faster to sort an array using the sorting method provided by this system
+of trials and focus primarily on whether it is faster to sort an array using the sorting methods provided by this system
 or the standard method available by calling {\tt java.util.Arrays.sort}. Your response to this research question should
 leverage the timings and their arithmetic means and standard deviations, particularly focusing on which algorithmic
-technique leads to the fastest and least-variable method for array reversal. Whenever possible, you should note the key
+technique leads to the fastest and least-variable method for array sort. Whenever possible, you should note the key
 trends and, additionally, explain why they are evident in your data set.
 
 \noindent {\em RQ3: How does the performance of sorting change as the size of the array increases?\/} To answer this
@@ -201,7 +201,7 @@ Before you turn in this assignment, you must ensure that the course instructor h
 repository that is named according to the convention {\tt cs112F2016-lab04-<user name one>-<user name two>}. Please note
 that each team in the class is responsible for submitting one version of this assignment. Students who have questions
 about any aspect of this laboratory assignment, including how they should complete it under the structure of the Honor
-Code, are encourage to schedule a meeting during the course instructor's office hours. Students are also encouraged to
+Code, are encourage to schedule a meeting during the course instructor's office hours. Students are also invited to
 post questions or comments about this laboratory assignment to the {\tt \#laboratory} channel in our Slack team; either
 a teaching assistant or the instructor will answer these questions.
 

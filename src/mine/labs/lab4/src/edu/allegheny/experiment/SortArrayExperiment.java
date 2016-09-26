@@ -9,25 +9,33 @@ public class SortArrayExperiment {
 
   private static class StatisticsCalculator {
 
-    public static long calculateArithmeticMean(Long[] timings) {
+    public static long calculateArithmeticMean(Long[] timings, boolean discardFirst) {
       long runningTotal = 0;
-      for (int i = 0; i < timings.length; i++) {
+      int start = 0;
+      if (discardFirst) {
+        start = 1;
+      }
+      for (int i = start; i < timings.length; i++) {
         runningTotal = runningTotal + timings[i];
       }
       return runningTotal / (long)timings.length;
     }
 
-    public static long calculateVariance(Long[] timings) {
-      long arithmeticMean = calculateArithmeticMean(timings);
+    public static long calculateVariance(Long[] timings, boolean discardFirst) {
+      long arithmeticMean = calculateArithmeticMean(timings, discardFirst);
       long runningTotal = 0;
-      for (int i = 0; i < timings.length; i++) {
+      int start = 0;
+      if (discardFirst) {
+        start = 1;
+      }
+      for (int i = start; i < timings.length; i++) {
         runningTotal = (timings[i] - arithmeticMean) * (timings[i] - arithmeticMean);
       }
       return runningTotal / (long)timings.length;
     }
 
-    public static double calculateStandardDeviation(Long[] timings) {
-      return Math.sqrt(calculateVariance(timings));
+    public static double calculateStandardDeviation(Long[] timings, boolean discardFirst) {
+      return Math.sqrt(calculateVariance(timings, discardFirst));
     }
 
   }
@@ -36,8 +44,9 @@ public class SortArrayExperiment {
     String indentation = new String("  ");
     boolean debug = false;
     boolean always = true;
+    boolean discardFirst = true;
     int size = 10000;
-    int trials = 10;
+    int trials = 11;
 
     Long[] insertionSortTimings = new Long[trials];
 
@@ -64,8 +73,10 @@ public class SortArrayExperiment {
 
     System.out.println("Integer Reversal Provided (ns):");
     ArrayPrinter.print(insertionSortTimings, indentation, always);
-    System.out.println(indentation + "Arithmetic Mean (ns): " + StatisticsCalculator.calculateArithmeticMean(insertionSortTimings));
-    System.out.println(indentation + "Standard Deviation (ns): " + StatisticsCalculator.calculateStandardDeviation(insertionSortTimings));
+    System.out.println(indentation + "Arithmetic Mean (ns): "
+        + StatisticsCalculator.calculateArithmeticMean(insertionSortTimings, discardFirst));
+    System.out.println(indentation + "Standard Deviation (ns): "
+        + StatisticsCalculator.calculateStandardDeviation(insertionSortTimings, discardFirst));
     System.out.println();
 
   }

@@ -49,8 +49,9 @@ public class SortArrayExperiment {
     int size = 10000;
     int trials = 11;
 
-    Long[] insertionSortTimings = new Long[trials];
     Long[] bubbleSortTimings = new Long[trials];
+    Long[] insertionSortTimings = new Long[trials];
+    Long[] utilSortTimings = new Long[trials];
 
     Character[] randomCharacterArray = new Character[size];
     randomCharacterArray = RandomArrayGenerator.generateRandomCharacterArray(size);
@@ -90,6 +91,25 @@ public class SortArrayExperiment {
     ArrayPrinter.print(randomCharacterArray, indentation, debug);
     System.out.println();
 
+    randomCharacterArray = new Character[size];
+    randomCharacterArray = RandomArrayGenerator.generateRandomCharacterArray(size);
+    System.out.println("java.util.Arrays.sort Array: ");
+    ArrayPrinter.print(randomCharacterArray, indentation, debug);
+
+    System.out.println("java.util.Arrays.sort Trials: ");
+    System.out.print(indentation);
+    for (int i = 0; i < trials; i++) {
+      long beforeUtilSort = System.nanoTime();
+      Arrays.sort(randomCharacterArray);
+      long afterUtilSort = System.nanoTime();
+      utilSortTimings[i] = new Long(afterUtilSort - beforeUtilSort);
+      System.out.print(".");
+    }
+
+    System.out.println();
+    ArrayPrinter.print(randomCharacterArray, indentation, debug);
+    System.out.println();
+
     System.out.println("Summary of Timing Results:");
     System.out.println();
 
@@ -107,6 +127,14 @@ public class SortArrayExperiment {
         + StatisticsCalculator.calculateArithmeticMean(bubbleSortTimings, discardFirst));
     System.out.println(indentation + "Standard Deviation (ns): "
         + StatisticsCalculator.calculateStandardDeviation(bubbleSortTimings, discardFirst));
+    System.out.println();
+
+    System.out.println("java.util.Arrays.sort Timings (ns):");
+    ArrayPrinter.print(utilSortTimings, indentation, always);
+    System.out.println(indentation + "Arithmetic Mean (ns): "
+        + StatisticsCalculator.calculateArithmeticMean(utilSortTimings, discardFirst));
+    System.out.println(indentation + "Standard Deviation (ns): "
+        + StatisticsCalculator.calculateStandardDeviation(utilSortTimings, discardFirst));
     System.out.println();
 
   }

@@ -3,6 +3,7 @@ package edu.allegheny.experiment;
 import java.util.Arrays;
 import java.util.Collections;
 
+import dsaj.arrays.BubbleSort;
 import dsaj.arrays.InsertionSort;
 
 public class SortArrayExperiment {
@@ -49,9 +50,11 @@ public class SortArrayExperiment {
     int trials = 11;
 
     Long[] insertionSortTimings = new Long[trials];
+    Long[] bubbleSortTimings = new Long[trials];
 
     Character[] randomCharacterArray = new Character[size];
     randomCharacterArray = RandomArrayGenerator.generateRandomCharacterArray(size);
+    System.out.println("InsertionSort Array: ");
     ArrayPrinter.print(randomCharacterArray, indentation, debug);
 
     System.out.println("InsertionSort Trials: ");
@@ -68,15 +71,42 @@ public class SortArrayExperiment {
     ArrayPrinter.print(randomCharacterArray, indentation, debug);
     System.out.println();
 
+    randomCharacterArray = new Character[size];
+    randomCharacterArray = RandomArrayGenerator.generateRandomCharacterArray(size);
+    System.out.println("BubbleSort Array: ");
+    ArrayPrinter.print(randomCharacterArray, indentation, debug);
+
+    System.out.println("BubbleSort Trials: ");
+    System.out.print(indentation);
+    for (int i = 0; i < trials; i++) {
+      long beforeBubbleSort = System.nanoTime();
+      BubbleSort.bubbleSort(randomCharacterArray);
+      long afterBubbleSort = System.nanoTime();
+      bubbleSortTimings[i] = new Long(afterBubbleSort - beforeBubbleSort);
+      System.out.print(".");
+    }
+
+    System.out.println();
+    ArrayPrinter.print(randomCharacterArray, indentation, debug);
+    System.out.println();
+
     System.out.println("Summary of Timing Results:");
     System.out.println();
 
-    System.out.println("Integer Reversal Provided (ns):");
+    System.out.println("InsertionSort Timings (ns):");
     ArrayPrinter.print(insertionSortTimings, indentation, always);
     System.out.println(indentation + "Arithmetic Mean (ns): "
         + StatisticsCalculator.calculateArithmeticMean(insertionSortTimings, discardFirst));
     System.out.println(indentation + "Standard Deviation (ns): "
         + StatisticsCalculator.calculateStandardDeviation(insertionSortTimings, discardFirst));
+    System.out.println();
+
+    System.out.println("BubbleSort Timings (ns):");
+    ArrayPrinter.print(bubbleSortTimings, indentation, always);
+    System.out.println(indentation + "Arithmetic Mean (ns): "
+        + StatisticsCalculator.calculateArithmeticMean(bubbleSortTimings, discardFirst));
+    System.out.println(indentation + "Standard Deviation (ns): "
+        + StatisticsCalculator.calculateStandardDeviation(bubbleSortTimings, discardFirst));
     System.out.println();
 
   }

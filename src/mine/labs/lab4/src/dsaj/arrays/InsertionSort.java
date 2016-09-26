@@ -25,23 +25,23 @@ package dsaj.arrays;
 public class InsertionSort {
 
   /** Insertion-sort of an array of characters into nondecreasing order */
-  public static void insertionSort(char[] data) {
+  public static void insertionSort(Character[] data) {
     int n = data.length;
-    for (int k = 1; k < n; k++) {            // begin with second character
-      char cur = data[k];                    // time to insert cur=data[k]
-      int j = k;                             // find correct index j for cur
-      while (j > 0 && data[j-1] > cur) {     // thus, data[j-1] must go after cur
-        data[j] = data[j-1];                 // slide data[j-1] rightward
-        j--;                                 // and consider previous j for cur
+    for (int k = 1; k < n; k++) {
+      char cur = data[k].charValue();
+      int j = k;
+      while (j > 0 && data[j - 1].charValue() > cur) {
+        data[j] = new Character(data[j - 1].charValue());
+        j--;
       }
-      data[j] = cur;                         // this is the proper place for cur
+      data[j] = new Character(cur);
     }
   }
 
   public static void main(String[] args) {
-    char[] a = {'C', 'E', 'B', 'D', 'A', 'I', 'J', 'L', 'K', 'H', 'G', 'F'};
-    System.out.println(java.util.Arrays.toString(a));
-    insertionSort(a);
-    System.out.println(java.util.Arrays.toString(a));
+    Character[] characterExamples = {'C', 'E', 'B', 'D', 'A', 'I', 'J', 'L', 'K', 'H', 'G', 'F'};
+    System.out.println(java.util.Arrays.toString(characterExamples));
+    insertionSort(characterExamples);
+    System.out.println(java.util.Arrays.toString(characterExamples));
   }
 }

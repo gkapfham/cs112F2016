@@ -39,7 +39,7 @@
 
   <!--RUNNING TASK - "ant RunExperiment" -->
   <target name="RunExperiment" depends="compile">
-    <java fork="true" classname="ReverseArrayExperiment" maxmemory="3072m">
+    <java fork="true" classname="edu.allegheny.experiment.SortArrayExperiment" maxmemory="3072m">
       <classpath refid="build.classpath" />
       <arg value="" />
     </java>

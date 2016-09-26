@@ -77,13 +77,18 @@ understand. Why do you and your partner think that your program's new design is 
 
 \section*{Evaluating the Performance of Array Reversal}
 
-Before starting to conduct the experiment for this laboratory assignment, please ensure that you and your partner
-understand how the provided source code uses the nested class, called {\tt StatisticsCalculator}, to calculate the
-arithmetic mean, variance, and standard deviation of the timings that result from running multiple trials of the
-experiments. Can you write an equation for these three statistical values? If not, then please see the course instructor
-or a teaching assistant for help with this task. Now, you are ready to experimentally answer two research questions.
+In this laboratory assignment, you and your partner will conduct an experiment to evaluate the performance of three
+sorting algorithms. The insertion sort algorithm is described in Section 3.1.2 of your textbook and the bubble sort
+algorithm is part of the ``folklore'' of computer science. The third algorithm, provided by the {\tt
+java.util.Arrays.sort} method, is part of the Java programming language and documented in the online JavaDoc
+documentation. Before you start conducting an experiment to evaluate the performance of these algorithms, you and your
+partner should study the source code and documentation for these three algorithms and formulate a hypothesis as to which
+you think is likely to be the fastest. As you focus on the iteration constructs and conditional logic used by each of
+these algorithms, you should develop an intuition about how their structure will influence their performance as the size
+of the input array varies from very small to very large. Finally, you should conduct experiments to answer the following
+two research questions.
 
-\noindent {\em RQ1: How does the data type of an array influence the performance of the array reversal method?} To
+\noindent {\em RQ1: How does the data type of an array influence the performance of the array reversal method?\/} To
 answer this research question, you should run the {\tt ReverseArrayExperiment} class for a suitable number of trials and
 record the timings when the array reversal method accepts arrays of type {\tt Integer}, {\tt Float}, and {\tt
 CreditCard}; you and your partner are also encouraged to investigate other data types as you deem appropriate. Your
@@ -92,7 +97,7 @@ particularly focusing on which array data type leads to the fastest and least-va
 Whenever possible, you should note the key trends and, additionally, explain why they are evident in your data set.
 
 \noindent {\em RQ2: Is it faster to reverse an array using a ``hand-coded'' method or the one furnished by the Java
-language?} To answer this research question, you should run the {\tt ReverseArrayExperiment} class for a suitable number
+language?\/} To answer this research question, you should run the {\tt ReverseArrayExperiment} class for a suitable number
 of trials and focus primarily on whether it is faster to reverse an array using the {\tt reverse} method provided by
 this class or the standard method available by calling {\tt Collections.reverse}.  Your response to this research
 question should leverage the timings and their arithmetic means and standard deviations, particularly focusing on which

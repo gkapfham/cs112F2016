@@ -43,34 +43,37 @@ should see the course instructor.
 
 \section*{Building, Running, Repairing, and Enhancing a Java Program}
 
+After changing into the ``share'' repository for this course, please run the ``{\tt git pull}'' command to download all
+of the source code and the build system that you will need for this assignment. Once you have been able to successfully
+compile this program, please take time to review the source code of provided Java files, making sure that you and your
+partner can draw a diagram to explain how they are related. You should also carefully study the {\tt build.xml} file so
+that you can learn about all of the features that it provides. Now, you are ready to run the program by typing the
+command ``{\tt ant run}'' in your terminal window. What output does this produce? What is the meaning of this output? Do
+you understand the numbers that the program is outputting? You and your partner should examine this output, discussing
+it so as to ensure that you both understand its meaning.
 
+Even though this program is designed to perform an experiment to evaluate the performance of sorting arrays --- as
+implemented in the bubble sort, insertion sort, and {\tt java.util.Arrays.sort} methods --- you will notice that it does
+not currently produce any output so that you can verify that the reversal is working correctly! To ensure that the
+program reverses arrays in the right way, you should modify some of the existing code so that it produces debugging
+output for arrays that are small enough so that you can check the correctness of their sorting. Is the program
+correctly generating and sorting the arrays? If not, you must fix the provided source code. Please see the course
+instructor or a teaching assistant if you are stuck on this debugging step.
 
+You will also notice that, as it is currently implemented, the {\tt public static Character[]
+generateRandomCharacterArray(int size)} generates an array of {\tt Character}s in a fashion that is different from how
+the other random data generators are implemented. Why is the method implemented in this fashion? After you have
+understood this data generator you should also observe that the {\tt SortingArrayExperiment} now has a {\tt
+discardFirst} variable declared in {\tt main}. What is the purpose of this variable? How does it change the results of
+the experiment and the conclusions that you might draw about the performance of the three sorting algorithms?
 
-Once you have been able to successfully compile this program, please take time to review the source code of provided
-Java files, making sure that you and your partner can draw a diagram to explain how they are related. You should also
-carefully study the {\tt build.xml} file so that you can learn about all of the features that it provides.  Now, you are
-ready to run the program by typing the command ``{\tt ant run}'' in your terminal window. What output does this produce?
-What is the meaning of this output? You and your partner should examine this output, discussing it so as to ensure that
-you both understand its meaning. Even though this program is designed to perform an experiment to evaluate the
-performance of array reversal as implemented in the {\tt public static <T> void reverse(T[] data)} method, you will
-notice that it does not currently produce any output so that you can verify that the reversal is working correctly! To
-ensure that the program reverses arrays in the right way, you should modify some of the existing code so that it
-produces debugging output for arrays that are small enough so that you can check the correctness of their reversal. Is
-the program correctly generating and reversing the arrays? If not, you must fix the provided source code. Please see the
-course instructor if you are stuck on this debugging step.
-
-
-You will also notice that, as it is currently implemented, the {\tt ReverseArrayExperiment} performs a performance
-evaluation of array reversal with arrays of type {\tt Integer} and {\tt Float}. To complete this task, it uses the
-methods in the {\tt RandomArrayGenerator} class to automatically --- and randomly --- create {\tt Integer} and {\tt
-Float} arrays of a specified size. You and your partner should also study this Java class to ensure that you understand
-how it works. Now, you should extend it so that it also generates random instances of the {\tt CreditCard} class that
-have random values for the {\tt lim} and {\tt balance} parameters to the class's constructor. Finally, you will recall
-that the {\tt CreditCard} class from a prior laboratory assignment was placed in a Java package. To ensure that this
-Java class correctly integrates with all of the other provided source code, you should place the {\tt ArrayPrinter},
-{\tt RandomArrayGenerator}, and {\tt ReverseArrayExperiment} classes in the {\tt edu.allegheny.experiment} package,
-adjusting the source code and the directory structure accordingly. Please see the instructor or a teaching assistant if
-you have questions about this step.
+Next, since you and your partner will see that the {\tt SortingArrayExperiment} is currently implemented to only sort
+arrays that contain {\tt Character}s, you should extend it so that it sorts arrays of at least one additional data type,
+such as the {\tt Integer} or the {\tt Float}. Once your team has finished implementing this feature, you will likely
+realize that the source code of the {\tt main} method in {\tt SortingArrayExperiment} is becoming long and difficult to
+maintain and understand. In the final part of this phase of the assignment, you and your partner should apply the
+principles of object-oriented design to ``refactor'' the {\tt SortingArrayExperiment} to that it is easier to
+understand. Why do you and your partner think that your program's new design is an improvement over the old one?
 
 \section*{Evaluating the Performance of Array Reversal}
 

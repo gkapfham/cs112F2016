@@ -43,11 +43,11 @@ public class SortArrayExperiment {
 
   public static void main(String[] args) {
     String indentation = new String("  ");
-    boolean debug = false;
+    boolean debug = true;
     boolean always = true;
     boolean discardFirst = true;
-    int size = 10000;
-    int trials = 11;
+    int size = 10;
+    int trials = 1;
 
     Long[] bubbleSortTimings = new Long[trials];
     Long[] insertionSortTimings = new Long[trials];

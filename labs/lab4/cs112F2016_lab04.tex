@@ -63,16 +63,16 @@ instructor or a teaching assistant if you are stuck on this debugging step.
 You will also notice that, as it is currently implemented, the {\tt public static Character[]
 generateRandomCharacterArray(int size)} generates an array of {\tt Character}s in a fashion that is different from how
 the other random data generators are implemented. Why is the method implemented in this fashion? After you have
-understood this data generator you should also observe that the {\tt SortingArrayExperiment} now has a {\tt
+understood this data generator you should also observe that the {\tt SortArrayExperiment} now has a {\tt
 discardFirst} variable declared in {\tt main}. What is the purpose of this variable? How does it change the results of
 the experiment and the conclusions that you might draw about the performance of the three sorting algorithms?
 
-Next, since you and your partner will see that the {\tt SortingArrayExperiment} is currently implemented to only sort
+Next, since you and your partner will see that the {\tt SortArrayExperiment} is currently implemented to only sort
 arrays that contain {\tt Character}s, you should extend it so that it sorts arrays of at least one additional data type,
 such as the {\tt Integer} or the {\tt Float}. Once your team has finished implementing this feature, you will likely
-realize that the source code of the {\tt main} method in {\tt SortingArrayExperiment} is becoming long and difficult to
+realize that the source code of the {\tt main} method in {\tt SortArrayExperiment} is becoming long and difficult to
 maintain and understand. In the final part of this phase of the assignment, you and your partner should apply the
-principles of object-oriented design to ``refactor'' the {\tt SortingArrayExperiment} to that it is easier to
+principles of object-oriented design to ``refactor'' the {\tt SortArrayExperiment} to that it is easier to
 understand. Why do you and your partner think that your program's new design is an improvement over the old one?
 Whenever possible, you should use the principles developed in Chapter 2 to justify your decisions.
 
@@ -86,25 +86,39 @@ documentation. Before you start conducting an experiment to evaluate the perform
 partner should study the source code and documentation for these three algorithms and formulate a hypothesis as to which
 you think is likely to be the fastest. As you focus on the iteration constructs and conditional logic used by each of
 these algorithms, you should develop an intuition about how their structure will influence their performance as the size
-of the input array varies from very small to very large. Finally, you should conduct experiments to answer the following
-two research questions.
+of the input array varies from very small to very large.
+
+It is also important to remember that the current implementation of the {\tt SortArrayExperiment} has a feature that
+allows you to discard the first timing from a run of your of your benchmarking framework. You and your partner should
+carefully discuss this feature and decide if you will use it when conducting your experiments. Additionally, you should
+also note that the {\tt SortArrayExperiment} uses a variable to control the number of trials for which each of the three
+algorithms will be run. After conducting some exploratory studies with the {\tt SortArrayExperiment}, your partnership
+should decide how many trials you will run during your experimental study. Finally, you should conduct experiments to
+answer the following two research questions.
 
 \noindent {\em RQ1: How does the data type of an array influence the performance of the array sorting method?\/} To
 answer this research question, you should run the {\tt ReverseArrayExperiment} class for a suitable number of trials and
-record the timings when the array reversal method accepts arrays of type {\tt Character} and at least one of another
+record the timings when the array sort method accepts arrays of type {\tt Character} and at least one of another
 primitive data type like {\tt Float} or {\tt Integer}; you and your partner are also encouraged to investigate other
 data types as you deem appropriate. Your response to this research question should leverage the timings and their
 arithmetic means and standard deviations, particularly focusing on which array data type leads to the fastest and
-least-variable method for array reversal.  Whenever possible, you should note the key trends and, additionally, explain
-why they are evident in your data set.
+least-variable method for array sorting. You should note the key trends and, additionally, explain why they are evident.
 
 \noindent {\em RQ2: Is it faster to reverse an array using a ``hand-coded'' method or the one furnished by the Java
-language?\/} To answer this research question, you should run the {\tt ReverseArrayExperiment} class for a suitable number
-of trials and focus primarily on whether it is faster to reverse an array using the {\tt reverse} method provided by
-this class or the standard method available by calling {\tt Collections.reverse}.  Your response to this research
-question should leverage the timings and their arithmetic means and standard deviations, particularly focusing on which
-algorithmic technique leads to the fastest and least-variable method for array reversal. Whenever possible, you should
-note the key trends and, additionally, explain why they are evident in your data set.
+language?\/} To answer this research question, you should run the {\tt SortArrayExperiment} class for a suitable number
+of trials and focus primarily on whether it is faster to sort an array using the sorting method provided by this system
+or the standard method available by calling {\tt java.util.Arrays.sort}. Your response to this research question should
+leverage the timings and their arithmetic means and standard deviations, particularly focusing on which algorithmic
+technique leads to the fastest and least-variable method for array reversal. Whenever possible, you should note the key
+trends and, additionally, explain why they are evident in your data set.
+
+\noindent {\em RQ3: How does the performance of sorting change as the size of the array increases?\/} To answer this
+research question, you should systematically run the {\tt SortArrayExperiment} class with progressively larger arrays,
+looking to see how the execution time of the sorting algorithms increases as the array size increases. In particular,
+you must run the sorting algorithms for arrays of size 10, 100, 1000, 10000, at at least one size larger than 100000. As
+you conduct these experiments, please bear in mind that large array sizes may necessitate a long running time for (at
+least some of) the algorithms. Whenever possible, you should try to formulate the precise relationship between the size
+of the input array and the time needed by each of the three algorithms to sort the array.
 
 \section*{Carefully Review the Honor Code}
 

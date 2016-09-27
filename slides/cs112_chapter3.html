@@ -131,6 +131,17 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
         <section>
           <h1>CaesarCipher</h1>
+          <p class="fragment"><b class="green">What is the purpose of this class?</b></p>
+          <p class="fragment"><b class="green">What is the meaning of? ... </b></p>
+          <p class="fragment"><code>protected char[] encoder = new char[26];</code></p>
+          <p class="fragment"><code>encoder[k] = (char) ('A' + (k + rotation) % 26</code></p>
+          <p class="fragment"><code>for (int k=0; &lt; msg.length; k++)</code></p>
+          <p class="fragment"><code>if (Character.isUpperCase(msg[k]))</code></p>
+          <p class="fragment"><code>msg[k] = code[j];</code></p>
+        </section>
+
+        <section>
+          <h1 id="motivation_for_using_arrays"><b class="blue">Any Questions About Arrays?</b></h1>
         </section>
 
       </div>

@@ -28,32 +28,27 @@ slides that we have discussed during our recent class sessions. If you have ques
 the material that was presented in class, then please see the course instructor. If done appropriately, you may also
 post your question to the {\tt \#laboratory} channel of our Slack team.
 
-\section*{Downloading and Using the {\sc ExpOse} Tool from GitHub}
+\section*{Downloading the {\sc ExpOse} Tool from GitHub}
 
-To start this laboratory assignment, you should return to the {\tt cs112F2016-share} Git repository and type the ``{\tt
-git pull}'' command in the terminal window.  Now, you should have a {\tt lab5/} directory that you can explore further.
-Once again, please make sure that you can find the source code in this new directory and you understand why the
-directories in the assignment are structured the way that they are. Next, you should use GVim to study the source code
-in the {\tt build.xml} file.  As in the past assignments, when editing a Java program you can type ``{\tt ant compile}''
-in your terminal window and it will compile the Java class and save the bytecode in the correct subdirectories inside of
-the {\tt bin/} directory. Please see the course instructor if you cannot get this to work.
+You should complete this assignment with a partner; please ensure that you are working with someone who is different
+than your previous partners. Both members of the partnership are required to complete all of the steps for this
+laboratory assignment. To start this assignment, you should go to the {\tt https://github.com/kinneerc/ExpOse} web site
+and click the large green button to the right of the screen to see the SSH-based name for the repository. Now, use this
+repository name as the command-line argument to the ``{\tt git clone}'' command that you run in your terminal window.
 
-After you have carefully reviewed the source code for {\tt StringExperiment.java}, you should compile and run this
-program, using the {\tt build.xml} rules that correctly sets the {\tt CLASSPATH} and references the Java program with
-its ``fully qualified name''. Please run the {\tt StringExperiment} multiple times and note the data tables that it
-produces. You should be aware of the fact that some input sizes for this program may take a very long time to run! If
-that is the case, then you may want to reconsider the program's current implementation and change it so that the
-experiment runs more efficiently. What trends do you see in this data set? How do your tables of data compare to the one
-that the authors present on page 152 of your textbook? Can you clearly explain why these data values are evident in your
-data set and the one produced by the textbook's authors?
+At this point, you will have downloaded the entire {\sc ExpOse} system from the GitHub servers and saved it on your own
+computer. Each person is the partnership should ensure that they have their own download of {\sc ExpOse} as there is no
+need for your partnership to have a joint repository. Next, you should use GVim to study the source code in the {\tt
+build.xml} file that comes with the {\sc ExpOse} tool. As in the past assignments, when creating and using a Java
+program you can type ``{\tt ant compile}'' in your terminal window and it will compile the Java class and save the
+bytecode in the correct subdirectories inside of the {\tt bin/} directory. Please see the course instructor if you
+cannot get this to work. Next, you should load the source code of the {\tt SortingExperiment} into GVim so that you can
+study it carefully. What sorting algorithms does this {\sc ExpOse} experimentally study? Finally, please examine the
+source code of the {\tt UniqueExperiment}. What are the uniqueness detection algorithms that it studies? Make sure that
+you look at the source code of each of these algorithms, studying their structure as you try to discern their worst-case
+time complexity. Which of the algorithms are most efficient? Which of the algorithm seem to be be less efficient? Why?
 
-After you have tried out the {\tt StringExperiment}, you will notice that it does not run the method under study for
-multiple trials and then compute summary statistics (i.e., the arithmetic mean and the standard deviation) of the
-timings. Therefore, you should improve the program by moving the statistics calculation code from a previous laboratory
-assignment into your source code repository for this assignment.  Then, you should carefully integrate this new code so
-that it runs multiple trials and calculates the arithmetic mean and standard deviation for the numerous timings. Again,
-you may want to think about the feasibility of running one or both algorithms for multiple trials and very long strings
-because it may take an inordinate amount of time to run the experiment.
+\section*{Understanding the {\sc ExpOse} Tool's Approach}
 
 It is worth pointing out that your textbook contains several useful insights into the pattern that you should follow
 when making observations about time overhead. For instance, when describing the results from running the {\tt
@@ -63,10 +58,7 @@ method? Additionally, page 172 includes the following statement when describing 
 running times in that table $\ldots$ demonstrate a trend of approximately doubling each time the problem size doubles.''
 Again, what would this observation suggest about the likely worst-case time complexity of {\tt repeat2}?
 
-Finally, using what you know about the implementation of Strings in the Java language, you should explain why one of the
-algorithms has substantially better performance than the other. Ultimately, you should submit the commented code of and
-results from using your experimentation framework that systematically doubles the size of the input to the {\tt repeat1} and
-{\tt repeat2} methods.
+\section*{Determining ``Actual-Worst-Case'' Time Complexity}
 
 \section*{Carefully Review the Honor Code}
 

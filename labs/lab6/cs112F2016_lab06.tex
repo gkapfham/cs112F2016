@@ -38,8 +38,8 @@ repository name as the command-line argument to the ``{\tt git clone}'' command 
 
 At this point, you will have downloaded the entire {\sc ExpOse} system from the GitHub servers and saved it on your own
 computer. Each person is the partnership should ensure that they have their own download of {\sc ExpOse} as there is no
-need for your partnership to have a joint repository. Next, you should use GVim to study the source code in the {\tt
-build.xml} file that comes with the {\sc ExpOse} tool. As in the past assignments, when creating and using a Java
+need for your partnership to store it in joint repository. Next, you should use GVim to study the source code in the
+{\tt build.xml} file that comes with the {\sc ExpOse} tool. As in the past assignments, when creating and using a Java
 program you can type ``{\tt ant compile}'' in your terminal window and it will compile the Java class and save the
 bytecode in the correct subdirectories inside of the {\tt bin/} directory. Please see the course instructor if you
 cannot get this to work. Next, you should load the source code of the {\tt SortingExperiment} into GVim so that you can
@@ -130,14 +130,14 @@ determine that bubble-sort is $O(n^2)$.
 
 Next, you and your partner should repeatedly run {\sc ExpOse} for all possible configurations of the {\tt
 SortingExperiment} and {\tt UniqueExperiment}, carefully checking to see if the tool confirms the well-known time
-complexities for the different algorithms. For instance, this means that you must repeatedly run {\tt SortingExperiment}
-so that you infer the actual-worst-case time complexity for the five integrated sorting algorithms and then run {\tt
-UniqueExperiment} for the two chosen uniqueness detectors. Please run both of these programs multiple times, recording
-their output in a separate file. You and your partner should also complete a summary table that records the name of the
-algorithm, the well-known worst-case time complexity, and the complexity suggested by {\tt ExpOse}. In situations in
-which the tool's output differs from the time complexity that you found in a textbook or an online source, you should
-note why this is the case. Otherwise, you should use the source code of the algorithm to articulate why the inferred
-time complexity is, in fact, correct.
+complexities for the different algorithms. For instance, this means that you must repeatedly run {\tt
+SortingExperiment} so that you infer the actual-worst-case time complexity for the five integrated sorting
+algorithms and then run {\tt UniqueExperiment} for the two chosen uniqueness detectors. Please run both of these
+programs multiple times, recording their output in a separate file. You and your partner should also complete a
+summary table that records the name of the algorithm, the well-known worst-case time complexity, and the complexity
+suggested by {\tt ExpOse}. In situations in which the tool's output differs from the time complexity that you found
+in a textbook or an online source, you should note why this is the case. Otherwise, you should use the source code
+of the algorithm as you articulate why the inferred time complexity is, in fact, correct.
 
 \section*{Carefully Review the Honor Code}
 
@@ -186,14 +186,12 @@ This assignment invites you to submit a signed and printed version of the follow
 
 \end{enumerate}
 
-Again, along with turning in a printed version of these deliverables, you should ensure that everything is also
-available in the repository that is named according to the convention {\tt cs112F2016-<your user name>}. Please remember
-that students in the class are responsible for completing and submitting their own version of this assignment. You
-should see the instructor if you have any questions.
-
-% While it is acceptable for members of this class to have high-level conversations, you should not share source code or
-% full command lines with your classmates.  Deliverables that are nearly identical to the work of others will be taken as
-% evidence of violating the \mbox{Honor Code}.  Please see the instructor if you have questions about the policies for
-% this assignment.
+Before you turn in this assignment, you must ensure that the course instructor has read access to your Bitbucket
+repository that is named according to the convention {\tt cs112F2016-lab06-<user name one>-<user name two>}. Please note
+that each team in the class is responsible for submitting one version of this assignment. Students who have questions
+about any aspect of this laboratory assignment, including how they should complete it under the structure of the Honor
+Code, are encourage to schedule a meeting during the course instructor's office hours. Students are also invited to
+post questions or comments about this laboratory assignment to the {\tt \#laboratory} channel in our Slack team; either
+a teaching assistant or the instructor will answer these questions.
 
 \end{document}

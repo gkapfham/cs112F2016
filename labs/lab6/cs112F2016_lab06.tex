@@ -116,6 +116,18 @@ public static void bubbleSort(int data[], int n)} of the {\tt BubbleSort} class 
 time complexity. What is the already-known time complexity of all of the other sorting and uniqueness detection
 algorithms? How do you know that these time complexities are correct?
 
+\noindent Now you are ready to start running {\sc ExpOse} to infer the time complexities by typing:
+
+\begin{quote}
+{\tt java edu.allegheny.expose.examples.sort.SortingExperiment bubble --verbose}
+\end{quote}
+
+\noindent What is the output of this program? Does the output confirm the well-known worst-case time complexity of
+bubble-sort? How does {\sc ExpOse} implement the concept of a doubling experiment to infer the actual-worst-case time
+complexity? Does the {\sc ExpOse} tool determine the time complexity in an efficient manner? What are the benefits and
+drawbacks of the approach taken by {\sc ExpOse}? Please see the instructor if you are not able to use this tool to
+determine that bubble-sort is $O(n^2)$.
+
 \section*{Carefully Review the Honor Code}
 
 The Academic Honor Program that governs the entire academic program at Allegheny College is described in the Allegheny
@@ -123,21 +135,21 @@ Academic Bulletin. The Honor Program applies to all work that is submitted for a
 requirements for graduation at Allegheny. This includes all work assigned for this class (e.g., examinations, laboratory
 assignments, and the final project). All students who have enrolled in the College will work under the Honor Program.
 
-% Each student who has matriculated at the College has acknowledged the following pledge:
-% \vspace*{-.1in}
-% \begin{quote}
-%   I hereby recognize and pledge to fulfill my responsibilities, as defined in the Honor Code, and to maintain the
-%   integrity of both myself and the College community as a whole.
-% \end{quote}
-% \vspace*{-.1in}
+Each student who has matriculated at the College has acknowledged the following pledge:
+\vspace*{-.1in}
+\begin{quote}
+  I hereby recognize and pledge to fulfill my responsibilities, as defined in the Honor Code, and to maintain the
+  integrity of both myself and the College community as a whole.
+\end{quote}
+\vspace*{-.1in}
 
-% \noindent It is understood that an important part of the learning process in any course, and particularly one in
-% computer science, derives from thoughtful discussions with teachers and fellow students.  Such dialogue is encouraged.
-% However, it is necessary to distinguish carefully between the student who discusses the principles underlying a problem
-% with others and the student who produces assignments that are identical to, or merely variations on, someone else's
-% work. While it is acceptable for partners in this class to discuss their programs, data sets, and reports with their
-% classmates, deliverables that are nearly identical to the work of others will be taken as evidence of violating the
-% \mbox{Honor Code}.
+\noindent It is understood that an important part of the learning process in any course, and particularly one in
+computer science, derives from thoughtful discussions with teachers and fellow students.  Such dialogue is encouraged.
+However, it is necessary to distinguish carefully between the student who discusses the principles underlying a problem
+with others and the student who produces assignments that are identical to, or merely variations on, someone else's
+work. While it is acceptable for partners in this class to discuss their programs, data sets, and reports with their
+classmates, deliverables that are nearly identical to the work of others will be taken as evidence of violating the
+\mbox{Honor Code}.
 
 \section*{Summary of the Required Deliverables}
 

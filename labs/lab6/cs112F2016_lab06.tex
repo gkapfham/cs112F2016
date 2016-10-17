@@ -58,19 +58,6 @@ method? Additionally, page 172 includes the following statement when describing 
 running times in that table $\ldots$ demonstrate a trend of approximately doubling each time the problem size doubles.''
 Again, what would this observation suggest about the likely worst-case time complexity of {\tt repeat2}?
 
-A useful understanding of an algorithm's efficiency, the worst-case time complexity gives an upper bound on how an
-increase in the size of the input, denoted $n$, increases the execution time of the algorithm, $f(n)$. We have learned
-in class that this relationship is often expressed in the ``big-Oh'' notation, where $f(n)$ is $O(g(n))$ means that the
-time increases by no more than on order of $g(n)$. Since the worst-case complexity of an algorithm is evident when $n$
-is large, one approach for determining the big-Oh complexity of an algorithm is to conduct a doubling experiment with
-increasingly bigger input sizes. By measuring the time needed to run the algorithm on an input of size $n$ and the time
-needed to run with input of size $2n$, the algorithm's order of growth can be empirically determined.
-The goal of a doubling experiment is to draw a conclusion about the efficiency of the algorithm from the ratio
-$f(2n)/f(n)$ that represents the factor of change in runtime from input sizes $n$ to $2n$. For instance, a ratio of $2$
-would indicate that doubling the input size resulted in the runtime's doubling, thus leading to the conclusion that the
-algorithm under study is $O(n)$ or $O(n\log n)$. Table~\ref{table:ratios} shows some common time complexities and their
-corresponding ratios.
-
 \begin{table}[t]
 
   \begin{center}
@@ -92,6 +79,32 @@ corresponding ratios.
   % \vspace*{-.35in}
 
 \end{table}
+
+A useful understanding of an algorithm's efficiency, the worst-case time complexity gives an upper bound on how an
+increase in the size of the input, denoted $n$, increases the execution time of the algorithm, $f(n)$. We have learned
+in class that this relationship is often expressed in the ``big-Oh'' notation, where $f(n)$ is $O(g(n))$ means that the
+time increases by no more than on order of $g(n)$. Since the worst-case complexity of an algorithm is evident when $n$
+is large, one approach for determining the big-Oh complexity of an algorithm is to conduct a doubling experiment with
+increasingly bigger input sizes. By measuring the time needed to run the algorithm on an input of size $n$ and the time
+needed to run with input of size $2n$, the algorithm's order of growth can be empirically determined.
+The goal of a doubling experiment is to draw a conclusion about the efficiency of the algorithm from the ratio
+$f(2n)/f(n)$ that represents the factor of change in runtime from input sizes $n$ to $2n$. For instance, a ratio of $2$
+would indicate that doubling the input size resulted in the runtime's doubling, thus leading to the conclusion that the
+algorithm under study is $O(n)$ or $O(n\log n)$. Table~\ref{table:ratios} shows some common time complexities and their
+corresponding ratios.
+
+As you saw in the previous laboratory assignment, it is time consuming and challenging to implement your own framework
+for conducting a doubling experiment. Therefore, in this assignment, you will learn how to use {\sc ExpOse}, a tool that
+can automatically conduct a doubling experiment for you. Once your algorithm is added to {\sc ExpOse} (like the sorting
+and uniqueness detection algorithms that have already been integrated), you can use the tool to automatically conduct an
+experiment and reach a conclusion about the likely worst-case time complexity of an algorithm (since this inference is
+based on data observations from actual runs of an algorithm, the suggested complexity is called ``actual-worst-case'' in
+the remainder of this assignment sheet). It is nice to use {\sc ExpOse} when you want to confirm that an already-known
+worst-case time complexity is correct or you want to develop an intuition about an algorithms worst-case behavior.
+Overall, using a tool like {\sc ExpOse} enables you to make a clear link between the analytical and experimental
+evaluation of an algorithms efficiency. In the remainder of this assignment, we will use {\sc ExpOse} to confirm the
+conclusions that your textbook's authors have reached concerning the worst-case time complexity of two different types of
+algorithms (e.g., sorting algorithms and uniqueness detection algorithms).
 
 \section*{Determining ``Actual-Worst-Case'' Time Complexity}
 

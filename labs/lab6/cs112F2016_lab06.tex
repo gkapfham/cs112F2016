@@ -11,7 +11,7 @@ The current module of the course has focused on the importance and purpose of bo
 of algorithm performance. For this laboratory assignment, we will learn how to use a tool, called {\sc ExpOse}, that
 leverages the results from successive doubling experiments to infer the ``actual-worst-case'' time complexity of an
 algorithm. Using examples provided with {\sc ExpOse}, you will experimentally determine the actual-worst-case time
-complexity of several sorting algorithms and two algorithms for determining if there are no duplicate elements in an
+complexity of five sorting algorithms and two algorithms for determining if there are no duplicate elements in an
 array. Ultimately, you work aims to experimentally confirm some of the analytical evaluations of an algorithm provided
 in your textbook and in online sources. Throughout this assignment, you will take additional steps towards seeing the
 connection between the experimental and analytical evaluation of algorithms. Finally, you will continue to practice the
@@ -43,10 +43,10 @@ need for your partnership to store it in joint repository. Next, you should use 
 program you can type ``{\tt ant compile}'' in your terminal window and it will compile the Java class and save the
 bytecode in the correct subdirectories inside of the {\tt bin/} directory. Please see the course instructor if you
 cannot get this to work. Next, you should load the source code of the {\tt SortingExperiment} into GVim so that you can
-study it carefully. What sorting algorithms does this {\sc ExpOse} experimentally study? Finally, please examine the
+study it carefully. What sorting algorithms does {\sc ExpOse} experimentally study? Finally, please examine the
 source code of the {\tt UniqueExperiment}. What are the uniqueness detection algorithms that it studies? Make sure that
 you look at the source code of each of these algorithms, studying their structure as you try to discern their worst-case
-time complexity. Which of the algorithms are most efficient? Which of the algorithm seem to be be less efficient? Why?
+time complexity. Which of the algorithms are most efficient? Which of the algorithm seem to be less efficient? Why?
 
 \section*{Understanding the Approach Taken by {\sc ExpOse}}
 
@@ -99,10 +99,10 @@ can automatically conduct a doubling experiment for you. Once your algorithm is 
 and uniqueness detection algorithms that have already been integrated), you can use the tool to automatically conduct an
 experiment and reach a conclusion about the likely worst-case time complexity of an algorithm (since this inference is
 based on data observations from actual runs of an algorithm, the suggested complexity is called ``actual-worst-case'' in
-the remainder of this assignment sheet). It is nice to use {\sc ExpOse} when you want to confirm that an already-known
-worst-case time complexity is correct or you want to develop an intuition about an algorithms worst-case behavior.
+the remainder of this assignment sheet). It is nice to use {\sc ExpOse} when you want to confirm that a likely
+worst-case time complexity is correct or you want to develop an intuition about an algorithm's worst-case behavior.
 Overall, using a tool like {\sc ExpOse} enables you to make a clear link between the analytical and experimental
-evaluation of an algorithms efficiency. In the remainder of this assignment, we will use {\sc ExpOse} to confirm the
+evaluation of an algorithm's efficiency. In the remainder of this assignment, we will use {\sc ExpOse} to confirm the
 conclusions that your textbook's authors have reached concerning the worst-case time complexity of two different types of
 algorithms (e.g., sorting algorithms and uniqueness detection algorithms).
 
@@ -144,8 +144,8 @@ cs112F2016-lab06-<user name one>-<user name two>}. You can now use this reposito
 report on the worst-case time complexity of the five sorting algorithms and the two uniqueness detectors. Please note
 that you do not have to incorporate {\sc ExpOse} into your Bitbucket repository. Instead, each team is responsible for
 using the web-based interface to GitHub to submit at least one ``pull request'' that contains an improvement to the {\sc
-ExpOse} tool. Students who have not previously used GitHub to create a pull request that can review the tutorial that is
-available at {\tt https://yangsu.github.io/pull-request-tutorial/}. Intuitively, each partnership is going to add some
+ExpOse} tool. Students who have not previously used GitHub to create a pull request can review the tutorial that is
+available at \url{https://yangsu.github.io/pull-request-tutorial/}. Intuitively, each partnership is going to add some
 new feature to {\sc ExpOse} and then ask the maintainers of this project to incorporate their improvement into the main
 system that is available for download from GitHub. You and your partner may consider adding comments to the source code,
 reformatting the source code so that it is easier to read, or adding a new example like the {\tt SortingExperiment}.
@@ -173,6 +173,8 @@ classmates, deliverables that are nearly identical to the work of others will be
 
 This assignment invites you to submit a signed and printed version of the following deliverables:
 
+\vspace*{-.05in}
+
 \begin{enumerate}
 
   \itemsep0in
@@ -181,6 +183,8 @@ This assignment invites you to submit a signed and printed version of the follow
 
   \item A report that explains the well-known and inferred time complexities for the seven algorithms.
 
+  \item A ``pull request'' that you submit to the public GitHub repository for the {\sc ExpOse} tool.
+
   \item A reflective commentary on the challenges that you faced when creating the pull request.
 
   \item A reflective commentary on the challenges that you faced when running the {\sc ExpOse} tool.
@@ -188,6 +192,8 @@ This assignment invites you to submit a signed and printed version of the follow
   % \item Suggestions for the types of laboratory assignments that you would like to later complete.
 
 \end{enumerate}
+
+\vspace*{-.05in}
 
 Before you turn in this assignment, you must ensure that the course instructor has read access to your Bitbucket
 repository that is named according to the convention {\tt cs112F2016-lab06-<user name one>-<user name two>}. Please note

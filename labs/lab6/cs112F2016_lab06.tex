@@ -48,10 +48,10 @@ source code of the {\tt UniqueExperiment}. What are the uniqueness detection alg
 you look at the source code of each of these algorithms, studying their structure as you try to discern their worst-case
 time complexity. Which of the algorithms are most efficient? Which of the algorithm seem to be be less efficient? Why?
 
-\section*{Understanding the {\sc ExpOse} Tool's Approach}
+\section*{Understanding the Approach Taken by {\sc ExpOse}}
 
-It is worth pointing out that your textbook contains several useful insights into the pattern that you should follow
-when making observations about time overhead. For instance, when describing the results from running the {\tt
+In the last assignment, you studied statements in your textbook about a pattern that you could follow when making
+observations about an algorithm's time overhead. For instance, when describing the results from running the {\tt
 StringExperiment}, page 153 notes that ``[A]s the value of $n$ is doubled, the running time of {\tt repeat1} typically
 increases more than fourfold.'' What does this suggest about the likely worst-case time complexity of the {\tt repeat1}
 method? Additionally, page 172 includes the following statement when describing the performance of {\tt repeat2}: ``the
@@ -59,17 +59,16 @@ running times in that table $\ldots$ demonstrate a trend of approximately doubli
 Again, what would this observation suggest about the likely worst-case time complexity of {\tt repeat2}?
 
 A useful understanding of an algorithm's efficiency, the worst-case time complexity gives an upper bound on how an
-increase in the size of the input, denoted $n$, increases the execution time of the algorithm, $f(n)$.  This
-relationship is often expressed in the ``big-Oh'' notation, where $f(n)$ is $O(g(n))$ means that the time increases by
-no more than on order of $g(n)$. Since the worst-case complexity of an algorithm is evident when $n$ is large, one
-approach for determining the big-Oh complexity of an algorithm is to conduct a doubling experiment with increasingly
-bigger input sizes. By measuring the time needed to run the algorithm on an input of size $n$ and the time needed to run
-with input of size $2n$, the algorithm's order of growth can be empirically determined.
-
-The goal of a doubling experiment is to draw a conclusion regarding the efficiency of the algorithm from the ratio
+increase in the size of the input, denoted $n$, increases the execution time of the algorithm, $f(n)$. We have learned
+in class that this relationship is often expressed in the ``big-Oh'' notation, where $f(n)$ is $O(g(n))$ means that the
+time increases by no more than on order of $g(n)$. Since the worst-case complexity of an algorithm is evident when $n$
+is large, one approach for determining the big-Oh complexity of an algorithm is to conduct a doubling experiment with
+increasingly bigger input sizes. By measuring the time needed to run the algorithm on an input of size $n$ and the time
+needed to run with input of size $2n$, the algorithm's order of growth can be empirically determined.
+The goal of a doubling experiment is to draw a conclusion about the efficiency of the algorithm from the ratio
 $f(2n)/f(n)$ that represents the factor of change in runtime from input sizes $n$ to $2n$. For instance, a ratio of $2$
 would indicate that doubling the input size resulted in the runtime's doubling, thus leading to the conclusion that the
-algorithm under study is $O(n)$ or $O(n\log n)$.  Table~\ref{table:ratios} shows some common time complexities and their
+algorithm under study is $O(n)$ or $O(n\log n)$. Table~\ref{table:ratios} shows some common time complexities and their
 corresponding ratios.
 
 \begin{table}[t]

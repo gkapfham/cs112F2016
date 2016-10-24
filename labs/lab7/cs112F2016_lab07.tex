@@ -9,10 +9,10 @@
 
 The Fibonacci sequence includes the numbers in the integer sequence that develops in the following fashion: $0, 1, 1,
 2, 3, 5, 8, 13, 21, 34, 55, 89, \ldots$. More formally, we can define the {\em n}-th Fibonacci number, denoted $F_n$,
-by the following equation $F_n = F_{n-1} + F_{n-2}$. In this laboratory assignment, we will explore and
+by the following equation $F_n = F_{n-1} + F_{n-2}$. In this laboratory assignment, you will explore and
 extend an implementation of iterative and recursive algorithms for calculating the numbers in the Fibonacci sequence.
-Moreover, we will investigate how the bit-depth of the variable that stores the output of the Fibonacci calculator can
-influence the correctness of the final result. After learning how to conduct a detailed experimental study of an
+Moreover, you will investigate how the bit-depth of the variable that stores the output of the Fibonacci calculator can
+influence the correctness of the final result. After practicing how to conduct a detailed experimental study of an
 algorithm, students will develop and refine their writing skills as they create a comprehensive report of their results.
 
 \section*{Accessing and Using the Fibonacci Benchmarking Framework}
@@ -20,7 +20,7 @@ algorithm, students will develop and refine their writing skills as they create 
 \begin{sloppypar}
 
   To start this laboratory assignment, you should return to the {\tt cs112F2016-share} Git repository and type the
-  ``{\tt git pull}'' command in the terminal window.  Now, you should have a {\tt lab5/FibonacciBenchmark} directory
+  ``{\tt git pull}'' command in the terminal window.  Now, you should have a {\tt lab7/FibonacciBenchmark} directory
   that you can explore further.  Once again, please make sure that you can find the source code in this new directory
   and you understand why the directories in the assignment are structured the way that they are. Next, you should use
   GVim to study the source code in the {\tt build.xml} file.  As in the past assignment, you can type the command ``{\tt
@@ -32,7 +32,7 @@ algorithm, students will develop and refine their writing skills as they create 
 
 \begin{sloppypar}
 
-  As part of this assignment, we will examine the following different implementations: (i) {\tt RecursiveFibonacci}
+  As part of this assignment, you will examine the following different implementations: (i) {\tt RecursiveFibonacci}
   using {\tt int}, (ii) {\tt RecursiveFibonacci} using {\tt long}, (iii) {\tt IterativeFibonacci} using {\tt int}, and
   (iv) {\tt IterativeFibonacci} using {\tt long}. The {\tt UseFibonacci} class relies on the {\tt Profiler} class is in
   the {\tt profiler.jar} file in the {\tt lib/} directory in the {\tt FibonacciBenchmark} directory.  This means that
@@ -46,7 +46,7 @@ from the computation and timing information that is related to the execution of 
 try to execute the following command in your terminal window: ``{\tt java edu.allegheny.benchmark.UseFibonacci 10
 all}''. What is the output's meaning?
 
-\section*{Adding Additional Features}
+\section*{Implementing Additional Features}
 
 If you study the source code carefully, you will see that the {\tt UseFibonacci} program currently accepts two
 command-line arguments. What are they? As part of this laboratory assignment, you must extend the {\tt UseFibonacci}
@@ -75,10 +75,10 @@ Your report should also explain your experimental goals and design by clearly de
 the order in which you typed them. It should also include tables of results that list the running times for each of the
 different configurations of {\tt UseFibonacci}.  Make sure that you label the tables and directly reference them in the
 text of your report. Reports will will receive grade reductions if they contain tables of data and the paragraphs of
-analysis that are not properly formatted. Please remember that you should solely submit the source code of your program
-and the output from running it. Instead, you should to write a comprehensive report that identifies and explains the
-most noteworthy trends in your data sets. Students who want to learn more about recursion should review Sections 5.1
-through 5.5, paying close attention to Section 5.5.
+analysis that are not properly formatted. Please remember that you should not solely submit the source code of your
+program and the output from running it. Instead, you should also write a comprehensive report that identifies and
+explains the noteworthy trends in your data sets. Students who want to learn more about recursion should review
+Sections 5.1 through 5.5, paying close attention to Section 5.5.
 
 \section*{Summary of the Required Deliverables}
 

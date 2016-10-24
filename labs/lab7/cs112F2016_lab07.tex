@@ -17,27 +17,34 @@ algorithm, students will develop and refine their writing skills as they create 
 
 \section*{Accessing and Using the Fibonacci Benchmarking Framework}
 
-\begin{sloppypar} To start this laboratory assignment, you should return to the {\tt cs112F2016-share} Git repository
-  and type the ``{\tt git pull}'' command in the terminal window.  Now, you should have a {\tt lab5/FibonacciBenchmark}
-  directory that you can explore further.  Once again, please make sure that you can find the source code in this new
-  directory and you understand why the directories in the assignment are structured the way that they are. Next, you
-  should use GVim to study the source code in the {\tt build.xml} file.  As in the past assignment, you can type the
-  command ``{\tt ant compile}'' in a terminal and it will compile the three Java classes and save the bytecode in the
-  correct subdirectories inside of the {\tt bin/} directory.  Please see the instructor if you cannot get this to work.
+\begin{sloppypar}
+
+  To start this laboratory assignment, you should return to the {\tt cs112F2016-share} Git repository and type the
+  ``{\tt git pull}'' command in the terminal window.  Now, you should have a {\tt lab5/FibonacciBenchmark} directory
+  that you can explore further.  Once again, please make sure that you can find the source code in this new directory
+  and you understand why the directories in the assignment are structured the way that they are. Next, you should use
+  GVim to study the source code in the {\tt build.xml} file.  As in the past assignment, you can type the command ``{\tt
+  ant compile}'' in a terminal and it will compile the three Java classes and save the bytecode in the correct
+  subdirectories inside of the {\tt bin/} directory. Please see the instructor if you cannot get this to work.  Now,
+  make sure that you study the three files that are provided to you via Git.
+
 \end{sloppypar}
 
 \begin{sloppypar}
-  As part of this assignment, we will examine the following different implementations: (i) {\tt RecursiveFibonacci} using
-  {\tt int}, (ii) {\tt RecursiveFibonacci} using {\tt long}, (iii) {\tt IterativeFibonacci} using {\tt int}, and (iv) {\tt
-    IterativeFibonacci} using {\tt long}. The {\tt UseFibonacci} class relies on the {\tt Profiler} class is in the {\tt
-  profiler.jar} file in the {\tt lib/} directory of the Git repository.  This means that the {\tt UseFibonacci} program
-  will not run correctly unless you have both the {\tt bin/} directory and the {\tt profiler.jar} archive inside of your
-  {\tt CLASSPATH} environment variable.
+
+  As part of this assignment, we will examine the following different implementations: (i) {\tt RecursiveFibonacci}
+  using {\tt int}, (ii) {\tt RecursiveFibonacci} using {\tt long}, (iii) {\tt IterativeFibonacci} using {\tt int}, and
+  (iv) {\tt IterativeFibonacci} using {\tt long}. The {\tt UseFibonacci} class relies on the {\tt Profiler} class is in
+  the {\tt profiler.jar} file in the {\tt lib/} directory in the {\tt FibonacciBenchmark} directory.  This means that
+  the {\tt UseFibonacci} program will not run correctly unless you have both the {\tt bin/} directory and the {\tt
+  profiler.jar} archive inside of your {\tt CLASSPATH} environment variable.
+
 \end{sloppypar}
 
-Try to execute the {\tt UseFibonacci} program for different input values from 0 to 50. You should see the output from
-the computation and timing information that is related to the performance of the different algorithms. For example, try
-to execute the following command in your terminal window: ``{\tt java edu.allegheny.benchmark.UseFibonacci 10 all}''.
+Try to execute the {\tt UseFibonacci} program for different input values from 0 to 50. You should see the output
+from the computation and timing information that is related to the execution of the different algorithms. For example,
+try to execute the following command in your terminal window: ``{\tt java edu.allegheny.benchmark.UseFibonacci 10
+all}''. What is the output's meaning?
 
 \section*{Adding Additional Features}
 
@@ -48,17 +55,17 @@ to one of the words {\tt int}, {\tt long}, or {\tt all}. After {\tt UseFibonacci
 argument, it should use this additional information to run a specific experiment. One valid execution might be: ``{\tt
 java edu.allegheny.benchmark.Use\-Fibonacci 10 all long}''. This command line would indicate that you should only
 execute the methods within {\tt RecursiveFibonacci} and {\tt IterativeFibonacci} that operate on variables with the
-{\tt long} data type.  You will need to add conditional logic to {\tt UseFibonacci} in order to correctly
-implement this additional feature. Please see the instructor if you have questions about this task.
+{\tt long} data type. You will need to add conditional logic to {\tt UseFibonacci} in order to correctly add this new
+feature. Finally, enhance the code so that it runs an experiment for multiple trials.
 
 \vspace*{-.05in}
 \section*{Conducting Experiments to Evaluate Efficiency}
 \vspace*{-.05in}
 
-Now, you are ready to conduct an experiment to evaluate the performance of the four separate configurations of the
+Now you are ready to conduct an experiment to evaluate the performance of the four separate configurations of the
 Fibonacci algorithms. You should execute the program with ten different input values from 1 through 50. For each of the
-ten input values that you select, you should run the experiment five times and calculate the arithmetic mean. Make sure
-that your experiment determines when the {\tt int} primitive type can no longer represent the final answer that is
+ten input values that you select, you should run the experiment for five trials and report the arithmetic means. Make
+sure that your experiment determines when the {\tt int} primitive type can no longer represent the final answer that is
 returned by the method that calculates the Fibonacci number. Your experiment also should identify whether the iterative
 or the recursive algorithm is more efficient.  Finally, you should try to determine whether the use of {\tt long} or
 {\tt int} yields better performance for the iterative and recursive algorithms. Whenever possible, your report should

@@ -2,83 +2,34 @@
 
 \usepackage[compact]{titlesec}
 
-\begin{document} \MYTITLE{Laboratory Assignment Seven: Studying the Performance of Iteration and Recursion}
+\begin{document} \MYTITLE{Laboratory Assignment Eight: Performance Evaluation of a Security Program}
 \MYHEADERS{Laboratory Assignment Seven}{Due: October 31, 2016}
 
 \section*{Introduction}
 
-The Fibonacci sequence includes the numbers in the integer sequence that develops in the following fashion: $0, 1, 1,
-2, 3, 5, 8, 13, 21, 34, 55, 89, \ldots$. More formally, we can define the {\em n}-th Fibonacci number, denoted $F_n$,
-by the following equation $F_n = F_{n-1} + F_{n-2}$. In this laboratory assignment, you will explore and
-extend an implementation of iterative and recursive algorithms for calculating the numbers in the Fibonacci sequence.
-Moreover, you will investigate how the bit-depth of the variable that stores the output of the Fibonacci calculator can
-influence the correctness of the final result. After practicing how to conduct a detailed experimental study of an
-algorithm, students will develop and refine their writing skills as they create a comprehensive report of their results.
 
-\section*{Accessing and Using the Fibonacci Benchmarking Framework}
+\section*{Review Your Textbook}
 
-\begin{sloppypar}
+To do well on this laboratory assignment, you should review the content 
 
-  To start this laboratory assignment, you should return to the {\tt cs112F2016-share} Git repository and type the
-  ``{\tt git pull}'' command in the terminal window.  Now, you should have a {\tt lab7/FibonacciBenchmark} directory
-  that you can explore further.  Once again, please make sure that you can find the source code in this new directory
-  and you understand why the directories in the assignment are structured the way that they are. Next, you should use
-  GVim to study the source code in the {\tt build.xml} file.  As in the past assignment, you can type the command ``{\tt
-  ant compile}'' in a terminal and it will compile the three Java classes and save the bytecode in the correct
-  subdirectories inside of the {\tt bin/} directory. Please see the instructor if you cannot get this to work.  Now,
-  make sure that you study the three files that are provided to you via Git.
 
-\end{sloppypar}
 
-\begin{sloppypar}
+Next, you should carefully review the content in Section 4.1, paying particularly close attention to the
+results in Table 4.1 and Figure 4.1. To learn more about the uniqueness detection algorithms studied in this assignment,
+please read Section 4.3.3, specifically noting Code Fragments 4.7 and 4.8
 
-  As part of this assignment, you will examine the following different implementations: (i) {\tt RecursiveFibonacci}
-  using {\tt int}, (ii) {\tt RecursiveFibonacci} using {\tt long}, (iii) {\tt IterativeFibonacci} using {\tt int}, and
-  (iv) {\tt IterativeFibonacci} using {\tt long}. The {\tt UseFibonacci} class relies on the {\tt Profiler} class is in
-  the {\tt profiler.jar} file in the {\tt lib/} directory in the {\tt FibonacciBenchmark} directory.  This means that
-  the {\tt UseFibonacci} program will not run correctly unless you have both the {\tt bin/} directory and the {\tt
-  profiler.jar} archive inside of your {\tt CLASSPATH} environment variable.
+.  Additionally, you should also examine the
+slides that we have discussed during our recent class sessions. If you have questions about this reading assignment or
+the material that was presented in class, then please see the course instructor. If done appropriately, you may also
+post your question to the {\tt \#laboratory} channel of our Slack team.
 
-\end{sloppypar}
+\section*{Features of the Computer Security Program}
 
-Try to execute the {\tt UseFibonacci} program for different input values from 0 to 50. You should see the output
-from the computation and timing information that is related to the execution of the different algorithms. For example,
-try to execute the following command in your terminal window: ``{\tt java edu.allegheny.benchmark.UseFibonacci 10
-all}''. What is the output's meaning?
-
-\section*{Implementing Additional Features}
-
-If you study the source code carefully, you will see that the {\tt UseFibonacci} program currently accepts two
-command-line arguments. What are they? As part of this laboratory assignment, you must extend the {\tt UseFibonacci}
-class and the command-line arguments that it can accept. You should add a third command-line argument that corresponds
-to one of the words {\tt int}, {\tt long}, or {\tt all}. After {\tt UseFibonacci} extracts this new command-line
-argument, it should use this additional information to run a specific experiment. One valid execution might be: ``{\tt
-java edu.allegheny.benchmark.Use\-Fibonacci 10 all long}''. This command line would indicate that you should only
-execute the methods within {\tt RecursiveFibonacci} and {\tt IterativeFibonacci} that operate on variables with the
-{\tt long} data type. You will need to add conditional logic to {\tt UseFibonacci} in order to correctly add this new
-feature. Finally, enhance the code so that it runs an experiment for multiple trials.
 
 \vspace*{-.05in}
 \section*{Conducting Experiments to Evaluate Efficiency}
 \vspace*{-.05in}
 
-Now you are ready to conduct an experiment to evaluate the performance of the four separate configurations of the
-Fibonacci algorithms. You should execute the program with ten different input values from 1 through 50. For each of the
-ten input values that you select, you should run the experiment for five trials and report the arithmetic means. Make
-sure that your experiment determines when the {\tt int} primitive type can no longer represent the final answer that is
-returned by the method that calculates the Fibonacci number. Your experiment also should identify whether the iterative
-or the recursive algorithm is more efficient.  Finally, you should try to determine whether the use of {\tt long} or
-{\tt int} yields better performance for the iterative and recursive algorithms. Whenever possible, your report should
-explain why these trends are evident in your data sets.
-
-Your report should also explain your experimental goals and design by clearly describing the commands that you typed and
-the order in which you typed them. It should also include tables of results that list the running times for each of the
-different configurations of {\tt UseFibonacci}.  Make sure that you label the tables and directly reference them in the
-text of your report. Reports will will receive grade reductions if they contain tables of data and the paragraphs of
-analysis that are not properly formatted. Please remember that you should not solely submit the source code of your
-program and the output from running it. Instead, you should also write a comprehensive report that identifies and
-explains the noteworthy trends in your data sets. Students who want to learn more about recursion should review
-Sections 5.1 through 5.5, paying close attention to Section 5.5.
 
 \section*{Summary of the Required Deliverables}
 

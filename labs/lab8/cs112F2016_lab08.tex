@@ -20,19 +20,59 @@ confirm the correctness of your suggested time complexity.
 
 To do well on this laboratory assignment, you should review the content in several sections of the textbook. Please
 study Sections 1.8 and 1.9 to learn more about packages and import statements in Java and the correct way to engineer
-software. Next, you should carefully review all of Chapter 2, paying particularly close attention to Sections 2.1 and
-2.5 and their treatment of object-oriented design principles. You should also study all of Chapter 4, focusing on the
+software. Next, you should carefully review all of Chapter 2, paying particularly close attention to Sections 2.1, 2.3,
+and 2.5 and their treatment of object-oriented principles. You should also study all of Chapter 4, focusing on the
 examples, featured on pages 176 and 177, that reveal how to prove the worst-case time complexity of an algorithm.
 Finally, if your password checking and improvement system requires the use of recursion, then you should review the
-material in Chapter 5. Please see the instructor with questions about this content.
+material in Chapter 5. Please see the instructor with all of your questions.
 
 \section*{Features of the Computer Security Program}
 
+Instead of relying on code that the course instructor provides to you, this assignment requires you to start the project
+``from scratch'', relying on your prior laboratory assignments as a source of examples and inspiration. To start, you
+should implement a program that performs password checking. It should ensure that the user's input password contains at
+least one capital and lowercase letter, a symbol that is not alphanumeric, and is longer than eight characters in
+length. Additionally, your program should improve a user's password if it does not meet one of the aforementioned
+criteria. For instance, if the provided password does not contain a capital letter, then you should include at least one
+capital letter at some location in the password. If the password is not long enough, then the program should add
+appropriate characters to it until the length is suitable.
+
+The program that you implement should adhere to the principles of object-oriented design. In addition, the source code
+of the program should be organized into one or more packages and all of the code should be automatically compiled and
+deleted through an Ant build system. Whenever it is necessary to do so, the program should correctly employ the
+principles of object-oriented programming, correctly using polymorphism, inheritance, and encapsulation and the related
+Java language features such as exceptions, casting, and generics. Finally, the code should be carefully commented using
+the JavaDoc standard. That is, each Java class should have a ``header'' comment and all methods should have their own
+comment as well. Finally, all of the most important lines in the program should also have comments that clearly explain
+how the source code contributes a main feature of the system. Please see the instructor if you have questions about
+these features.
 
 \vspace*{-.05in}
 \section*{Conducting Experiments to Evaluate Efficiency}
 \vspace*{-.05in}
 
+\section*{Carefully Review the Honor Code}
+
+The Academic Honor Program that governs the entire academic program at Allegheny College is described in the Allegheny
+Academic Bulletin.  The Honor Program applies to all work that is submitted for academic credit or to meet non-credit
+requirements for graduation at Allegheny College.  This includes all work assigned for this class (e.g., examinations,
+  laboratory assignments, and the final project).  All students who have enrolled in the College will work under the Honor
+Program.  Each student who has matriculated at the College has acknowledged the following pledge:
+
+\vspace*{-.1in}
+\begin{quote}
+  I hereby recognize and pledge to fulfill my responsibilities, as defined in the Honor Code, and to maintain the
+  integrity of both myself and the College community as a whole.
+\end{quote}
+\vspace*{-.1in}
+
+\noindent It is understood that an important part of the learning process in any course, and particularly one in
+computer science, derives from thoughtful discussions with teachers and fellow students.  Such dialogue is encouraged.
+However, it is necessary to distinguish carefully between the student who discusses the principles underlying a problem
+with others and the student who produces assignments that are identical to, or merely variations on, someone else's
+work.  While it is acceptable for students in this class to discuss their programs, data sets, and reports with their
+classmates, deliverables that are nearly identical to the work of others will be taken as evidence of violating the
+\mbox{Honor Code}.
 
 \section*{Summary of the Required Deliverables}
 

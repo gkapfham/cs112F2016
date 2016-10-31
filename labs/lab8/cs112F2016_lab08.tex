@@ -10,11 +10,11 @@
 In the past laboratory assignments and classroom discussions we have investigated: (i) algorithms, (ii) data structures,
 (iii) the Java programming language, (iv) tools for software engineering, and (v) the analytical and empirical
 evaluation of algorithms. In this laboratory assignment, you will specify, design, and implement your own system that
-solves an interesting problem in the field of computer security. In particular, we will implement and evaluate a program
-that checks and improves passwords. Your program will perform various checks to determine if the user's password is
-secure. If one or more of these checks fail, then you will improve the password until all checks pass. You will
-intuitively prove the worst-case time complexity an algorithm in your program and then conduct a doubling experiment to
-confirm the correctness of your suggested time complexity.
+solves an interesting problem in the field of computer security. In particular, you will implement and evaluate a
+program that analyzes and improves passwords. Your program will perform various checks to determine if the user's
+password is secure. If one or more of these checks fail, then you will improve the password until all of them pass. You
+will intuitively prove the worst-case time complexity of an algorithm in your program and then conduct a doubling
+experiment to confirm the correctness of your suggested time complexity.
 
 \vspace*{-.05in}
 \section*{Review Your Textbook}
@@ -26,7 +26,7 @@ software. Next, you should carefully review all of Chapter 2, paying particularl
 and 2.5 and their treatment of object-oriented principles. You should also study all of Chapter 4, focusing on the
 examples, featured on pages 176 and 177, that reveal how to prove the worst-case time complexity of an algorithm.
 Finally, if your password checking and improvement system requires the use of recursion, then you should review the
-material in Chapter 5. Please see the instructor with all of your questions.
+material in Chapter 5. Please see the instructor with all of your questions!
 
 \vspace*{-.05in}
 \section*{Features of the Computer Security Program}
@@ -35,21 +35,21 @@ material in Chapter 5. Please see the instructor with all of your questions.
 Instead of relying on code that the course instructor provides to you, this assignment requires you to start the project
 ``from scratch'', relying on your prior laboratory assignments as a source of examples and inspiration. To start, you
 should implement a program that performs password checking. It should ensure that the user's input password contains at
-least one capital and lowercase letter, a symbol that is not alphanumeric, and is longer than eight characters in
-length. Additionally, your program should improve a user's password if it does not meet one of the aforementioned
-criteria. For instance, if the provided password does not contain a capital letter, then you should include at least one
-capital letter at some location in the password. If the password is not long enough, then the program should add
-appropriate characters to it until the length is suitable.
+least one capital and lowercase letter, a symbol that is not alphanumeric, and that it is longer than eight characters
+in length. Your program should also improve a user's password if it does not meet one of the aforementioned criteria.
+For instance, if the provided password does not contain a capital letter, then you should include at least one capital
+letter at some location in the password. If the password is not long enough, then the program should add appropriate
+characters to it until the length is suitable.
 
 The program that you implement should adhere to the principles of object-oriented design. In addition, the source code
 of the program should be organized into one or more packages and all of the code should be automatically compiled and
-deleted through an Ant build system. Whenever it is necessary to do so, the program should correctly employ the
-principles of object-oriented programming, correctly using polymorphism, inheritance, and encapsulation and the related
+managed through an Ant build system. Whenever it is necessary to do so, the program should correctly employ the
+principles of object-oriented programming, correctly using polymorphism, inheritance, and encapsulation and any relevant
 Java language features such as exceptions, casting, and generics. Finally, the code should be carefully commented using
 the JavaDoc standard. That is, each Java class should have a ``header'' comment and all methods should have their own
 comment as well. Finally, all of the most important lines in the program should also have comments that clearly explain
 how the source code contributes a main feature of the system. Please see the instructor if you have questions about
-these features.
+these requirements.
 
 \vspace*{-.05in}
 \section*{Conducting Experiments to Evaluate Efficiency}
@@ -59,8 +59,8 @@ After you have finished implementing your password checking and improvement prog
 your system (e.g., the algorithm that checks for the existence of a capital letter) and intuitively prove the worst-case
 time complexity of this method, following the examples on pages 176 and 177 as an example. To confirm the correctness of
 your final time complexity, you should conduct a doubling experiment --- either by using your own source code or by
-fully integrating a new example into the {\sc ExpOse} --- and then report on your results in a comprehensive report that
-contains table(s) of data and a full-featured discussion of the table(s).
+fully integrating a new example into the {\sc ExpOse} tool --- and then report on your results in a comprehensive report
+that contains table(s) of data and a full-featured discussion of the table(s).
 
 \section*{Carefully Review the Honor Code}
 

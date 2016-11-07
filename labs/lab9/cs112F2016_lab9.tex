@@ -1,55 +1,52 @@
-%!TEX root=cs112S2015-lab8.tex
-% mainfile: cs112S2015-lab8.tex
-
 \input{labspre.tex}
 
 \usepackage[compact]{titlesec}
 
-\begin{document} \MYTITLE{Laboratory Assignment Eight: Performing Arithmetic Interpretation with a Stack}
-\MYHEADERS{Laboratory Assignment Eight}{Due: March 26, 2015}
+\begin{document} \MYTITLE{Laboratory Assignment Nine: Performing Arithmetic Interpretation with a Stack}
+\MYHEADERS{Laboratory Assignment Nine}{Due: November 7, 2016}
 
 \section*{Introduction}
 
-  Many real-world programs use the stack abstract data type (ADT) to solve a problem.  For instance, the Java virtual
-  machine (JVM) relies on a stack to store the activation records for the methods that are called during the execution
-  of a program.  Moreover, stacks are often implemented as part of the hardware used in many modern computers. In this
-  laboratory assignment, you will learn how to use the stack ADT in a Java program.  In particular, you will implement
-  and test a {\tt StackMachine} that provides a simple language supporting select arithmetic operations.
+Many real-world programs use the stack abstract data type (ADT) to solve a problem.  For instance, the Java virtual
+machine (JVM) relies on a stack to store the activation records for the methods that are called during the execution
+of a program.  Moreover, stacks are often implemented as part of the hardware used in many modern computers. In this
+laboratory assignment, you will learn how to use the stack ADT in a Java program.  In particular, you will implement
+and test a {\tt StackMachine} that provides a simple language supporting select arithmetic operations.
 
 \section*{Learning About the Stack}
 
-  Before you start to implement your {\tt StackMachine}, you should take some time to learn more about the stack ADT.
-  What is an example of a problem that can be solved using the stack? Your response to this question should include a
-  brief introduction to the problem and a discussion of how the stack is incorporated into the solution. For instance,
-  you could explain a program that you have already implemented that manipulated a stack. Alternatively, you can study
-  books, articles, and online sources to investigate a well-known problem that can be solved through the use of a stack.
-  For instance, you could examine the algorithm that converts an expression in infix notation to postfix notation.
-  Please see the instructor if you have questions about this part of the assignment.
+Before you start to implement your {\tt StackMachine}, you should take some time to learn more about the stack ADT.
+What is an example of a problem that can be solved using the stack? Your response to this question should include a
+brief introduction to the problem and a discussion of how the stack is incorporated into the solution. For instance,
+you could explain a program that you have already implemented that manipulated a stack. Alternatively, you can study
+books, articles, and online sources to investigate a well-known problem that can be solved through the use of a stack.
+For instance, you could examine the algorithm that converts an expression in infix notation to postfix notation.
+Please see the instructor if you have questions about this part of the assignment.
 
 \section*{Implementing an Arithmetic Interpreter}
 
-  In this assignment, you will write a Java program that constructs an instance of the {\tt java.util.Stack} class. What
-  are the key methods provided by {\tt java.util.Stack}? What are the inputs and outputs of the key methods? What is
-  the behavior of these methods? Please make sure that you review your text book and consult the instructor if you do
-  not understand the methods of \mbox{the stack}.
+In this assignment, you will write a Java program that constructs an instance of the {\tt java.util.Stack} class. What
+are the key methods provided by {\tt java.util.Stack}? What are the inputs and outputs of the key methods? What is
+the behavior of these methods? Please make sure that you review your text book and consult the instructor if you do
+not understand the methods of \mbox{the stack}.
 
-  A program that only uses a single stack for storage sometimes is called a ``stack machine''. A stack machine normally 
-  supports a language describing the operations that it can perform. Consider the following language for a stack machine
-  that enables select arithmetic computations:
+A program that only uses a single stack for storage sometimes is called a ``stack machine''. A stack machine normally 
+supports a language describing the operations that it can perform. Consider the following language for a stack machine
+that enables select arithmetic computations:
 
 \begin{tabular}{r | l}
-Command & Meaning \\ \hline
-\emph{int} & push \emph{int} on the stack \\
-+ & push a ``+'' onto the stack \\
-s & push an ``s'' onto the stack \\
-d & display contents of the stack \\
-x & stop the stack machine \\
-e & evaluate the top of the stack (see the following commentary) \\
+  Command & Meaning \\ \hline
+  \emph{int} & push \emph{int} on the stack \\
+  + & push a ``+'' onto the stack \\
+  s & push an ``s'' onto the stack \\
+  d & display contents of the stack \\
+  x & stop the stack machine \\
+  e & evaluate the top of the stack (see the following commentary) \\
 \end{tabular}
 
-  The ``d'' command simply prints out the contents of the stack, one element per line, beginning with the top of the
-  stack. The behavior of the ``e'' command depends on the contents of the stack when the ``e'' is issued. For this
-  laboratory assignment, the ``e'' command must follow these rules:
+The ``d'' command simply prints out the contents of the stack, one element per line, beginning with the top of the
+stack. The behavior of the ``e'' command depends on the contents of the stack when the ``e'' is issued. For this
+laboratory assignment, the ``e'' command must follow these rules:
 
 \begin{enumerate}
 
@@ -67,10 +64,10 @@ The following examples illustrates the impact of the ``e'' command. Note that in
 the left and the notation ``$\ldots$'' denotes the rest of the stack's contents.
 
 \begin{tabular}{r | l}
-State of Stack Before ``e'' & State of Stack After ``e'' \\ \hline
-+ 1 2 5 s $\ldots$  & 3 5 s $\ldots$ \\
-s 1 + + 10 $\ldots$ & + 1 + 10 $\ldots$ \\
-1 + 3 $\ldots$      & 1 + 3 $\ldots$ \\
+  State of Stack Before ``e'' & State of Stack After ``e'' \\ \hline
+  + 1 2 5 s $\ldots$  & 3 5 s $\ldots$ \\
+  s 1 + + 10 $\ldots$ & + 1 + 10 $\ldots$ \\
+  1 + 3 $\ldots$      & 1 + 3 $\ldots$ \\
 \end{tabular}
 
 You must implement an interpreter for this arithmetic language. The input to your program is a series of commands, with
@@ -90,9 +87,9 @@ instructor if you have any questions.
 
 \section*{Summary of the Required Deliverables}
 
-  This assignment invites you to submit a signed and printed version of the following deliverables:
+This assignment invites you to submit a signed and printed version of the following deliverables:
 
-  \begin{enumerate}
+\begin{enumerate}
   \itemsep0pt
 
   \item A complete description of a problem that can be solved by using the stack abstract data type
@@ -105,14 +102,14 @@ instructor if you have any questions.
 
   \item A reflective commentary on the challenges that you faced when completing this assignment
 
-  \end{enumerate}
+\end{enumerate}
 
-  Along with turning in a printed version of these deliverables, you should ensure that everything is also available in
-  the repository that is named according to the convention {\tt cs112S2015-<your user name>}. Please note that students
-  in the class are responsible for completing and submitting their own version of this assignment.    While it is
-  acceptable for members of this class to have high-level conversations, you should not share source code or full
-  command lines with your classmates.  Deliverables that are nearly identical to the work of others will be taken as
-  evidence of violating the \mbox{Honor Code}.  Please see the instructor if you have questions about the policies for
-  this assignment.
+Along with turning in a printed version of these deliverables, you should ensure that everything is also available in
+the repository that is named according to the convention {\tt cs112S2015-<your user name>}. Please note that students
+in the class are responsible for completing and submitting their own version of this assignment.    While it is
+acceptable for members of this class to have high-level conversations, you should not share source code or full
+command lines with your classmates.  Deliverables that are nearly identical to the work of others will be taken as
+evidence of violating the \mbox{Honor Code}.  Please see the instructor if you have questions about the policies for
+this assignment.
 
-  \end{document}
+\end{document}

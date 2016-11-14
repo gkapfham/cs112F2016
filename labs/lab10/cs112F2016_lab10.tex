@@ -1,12 +1,9 @@
-%!TEX root=cs112S2015-lab9.tex
-% mainfile: cs112S2015-lab9.tex
-
 \input{labspre.tex}
 
 \usepackage[compact]{titlesec}
 
 \begin{document} \MYTITLE{Laboratory Assignment Nine: A Queue-Based Solution to the Josephus Problem}
-\MYHEADERS{Laboratory Assignment Nine}{Due: April 2, 2015}
+\MYHEADERS{Laboratory Assignment Ten}{Due: November 21, 2016}
 
 \section*{Introduction}
 
@@ -36,13 +33,13 @@
   continues in the same fashion. This game play continues until there is only one child left, who is then declared the
   winner.
 
-  It turns out that this game was first recorded by Flavius Josephus, a first century Jewish historian who was a solider
-  in a Jewish-Roman war.  It is possible to use a queue to ``simulate'' the process of playing this game and then
-  quickly determine who will win.  \mbox{After typing} the command {\tt git pull} in the {\tt cs112S2015-share}
-  repository, you will see that there is \mbox{now a} {\tt labs/lab9/} directory that contains a {\tt build.xml} file, a
+  It turns out that this ``game'' was first recorded by Flavius Josephus, a first century Jewish historian who was a
+  solider in a Jewish-Roman war.  It is possible to use a queue to ``simulate'' the process of playing this game and
+  then quickly determine who will win.  \mbox{After typing} the command {\tt git pull} in the {\tt cs112F2016-share}
+  repository, you will see that there is \mbox{now a} {\tt labs/lab10/} directory that contains a {\tt build.xml} file, a
   {\tt net-datastructures-5-0.jar} Java archive, and {\tt JosephusSolver.java} file in the {\tt
-    src/edu/allegheny/solver/} directory.  You can run this program by typing ``{\tt ant JosephusSolver}'' in the terminal
-  or ``{\tt :Ant JosephusSolver}'' \mbox{in GVim}.
+  src/edu/allegheny/solver/} directory. You can run this program by typing ``{\tt ant JosephusSolver}'' in the terminal.
+  What output do you see?
 
   If you study {\tt JosephusSolver.java} you will notice that it contains a {\tt main} method that creates different
   groups of children and then runs the solver by specifying a group of children and a stopping point for each round.
@@ -93,7 +90,7 @@
   \end{enumerate}
 
   Along with turning in a printed version of these deliverables, you should ensure that everything is also available in
-  the repository that is named according to the convention {\tt cs112S2015-<your user name>}. Please note that students
+  the repository that is named according to the convention {\tt cs112F2016-<your user name>}. Please note that students
   in the class are responsible for completing and submitting their own version of this assignment.    While it is
   acceptable for members of this class to have high-level conversations, you should not share source code or full
   command lines with your classmates.  Deliverables that are nearly identical to the work of others will be taken as

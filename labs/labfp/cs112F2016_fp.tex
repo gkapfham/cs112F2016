@@ -3,26 +3,26 @@
 \usepackage[compact]{titlesec}
 
 \begin{document} \MYTITLE{Final Project: Real-World Applications of Computer Science}
-\MYHEADERS{Final Project}{Due: December 20, 2016 by 12:00 noon}
+\MYHEADERS{Final Project}{Due: December 15, 2016 by 5:00 pm}
 
 \vspace*{-.2in}
 
 \section*{Introduction}
 
-Throughout the semester, you have learned more about the basics of computer science and Java programming by studying, in
-a hands-on fashion, topics such as data and expressions, the use and creation of Java classes, conditionals and loops,
-and arrays.  This final project invites you to explore, in greater detail, a real-world application of computer science.
-You will learn more about how to use, implement, test, and evaluate different types of real-world computer software.
-Since you will complete the final project with a partner, you will also learn more about how the Git version control
-system can effectively support collaborative software development.
+So far you have learned more about the fundamentals of computer science and Java programming by studying, in a hands-on
+fashion, topics such as the use and creation of object-oriented Java programs, recursion, fundamental data structures,
+and algorithm analysis. This final project invites you to explore, in greater detail, a real-world application of
+computer science. You will learn more about how to use, implement, test, and evaluate different types of real-world
+computer software. Since you will complete the final project with a partner, you will also learn more about how the Git
+version control system can effectively support collaborative software development.
 
 Your project should result in a detailed report that includes all of your source code, in addition to written materials
-and technical diagrams that highlight the key contributions of your work.  The report should include a description of
-why the chosen topic is important and discuss the implementation and/or experimentation that you undertook.  The written
-material should be precise, formal, appropriately formatted, grammatically correct, informative, and interesting.  The
-source code that you write must be carefully documented and tested.  If you install and use existing computer software
-(e.g., a Java library for natural language processing),  the steps for installation and use should be clearly documented
-in your report. Also, the report must explain the steps to run your own Java program.  Finally, your paper must detail
+and technical diagrams that highlight the key contributions of your work. The report should include a description of
+why the chosen topic is important and discuss the implementation and/or experimentation that you undertook. The written
+material should be precise, formal, appropriately formatted, grammatically correct, informative, and interesting. The
+source code that you write must be carefully documented and tested. If you install and use existing computer software
+(e.g., a Java library for performance evaluation), the steps for installation and use should be clearly documented
+in your report. Also, the report must explain the steps to run your own Java program. Finally, your paper must detail
 the work completed by each member of your partnership; individual contributions should also be reflected in the Git
 repository's log.
 
@@ -40,31 +40,27 @@ feasibility of the project that you propose.
     cryptography and/or cryptanalysis systems.  To start, you should investigate, implement, and test ciphers such as
     the Caesar and Vigenere ciphers. Then, you should use your ciphers to demonstrate that you can successfully send
     secret messages through, for instance, an email server. In addition to creating and testing these Java programs,
-    your report should include a detailed explanation of how your chosen algorithms work.
+    your report should include a detailed explanation of how your chosen algorithms work. To learn more about this
+    topic, please review Section 3.1.4 of the textbook.
 
-  \item {\bf Computer Graphics}: Potentially using your textbook's sections on computer graphics as a starting point,
-    implement a complete program that displays computer graphics.  Students who select this project should consider ways
-    in which the graphics can, for instance, represent realistic entities, support interactivity, and properly adhere to
-    artistic principles of color, light, and layout. In addition to furnishing the project's source code, your report
-    should include a detailed artistic, technical, and/or mathematical commentary on the final graphics.
+  \item {\bf Data Structures}: This topic invites you to either investigate a data structure that we did not already
+    study this semester or, alternatively, further look into a data structure that we previously discussed. A team that
+    selects this project might review the textbook's content about a specific data structure (e.g., Chapter 6's
+    discussion of stacks, queues, and double-ended queues) and then identify one area for further study. For instance,
+    you could decide to implement and test your own version of these data types that is ``backed'' by a dynamic array.
+    Alternatively, you could use as an inspiration some of the guidelines in Chapter 7 and implement your own dynamic
+    array that can both grow and shrink in size.
+
 
   \item {\bf Performance Evaluation}: Since it is often important to implement computer software that exhibits
     acceptable time and space overheads, this project invites students to use and/or extend performance evaluation
-    software like Caliper.  After finding, reading, and understanding textbooks and research papers on this topic,
-    students who pick this project should identify a focus area and create a benchmarking framework.  The
-    final version of the framework should allow students to measure the performance of computations in Java, report
-    those measurements to the user of the benchmarks, and support informed decision making about design and
-    implementation trade-offs.  Along with including the source code of the benchmarking framework, this
-    project invites students to write a performance evaluation report.
-
-  \item {\bf Natural Language Processing}: This topic invites students to implement, test, and use Java programs that
-    can analyze natural language text that has been written and saved in a computer-based format.  Using and/or
-    extending existing frameworks such as LingPipe, this project asks students to investigate how software can complete
-    real-world tasks such as finding and classifying the names of people mentioned in online news articles,
-    automatically categorizing Twitter search results, and tagging the parts of speech in a full paragraph of English
-    language text. Students who select this project will implement and/or extend a natural language processing system,
-    evaluate its efficiency and effectiveness, and write a report detailing both their implementation experiences and
-    the empirical results.
+    software like Expose.  After finding, reading, and understanding textbooks and research papers on this topic,
+    students who pick this project should identify a focus area and create/extend a benchmarking framework.  The final
+    version of the framework should allow students to measure the performance of computations in Java, report those
+    measurements to the user of the benchmarks, and support informed decision making about design and implementation
+    trade-offs. Along with including the source code of the benchmarking framework, this project invites students to
+    write a performance evaluation report. To learn more about this topic, a team should carefully review Chapter 4 of
+    the textbook.
 
   \item {\bf Software Testing}: In response to the fact that real-world software often contains serious defects, this
     project encourages students to learn more about techniques that can find program errors before they are delivered to
@@ -72,15 +68,16 @@ feasibility of the project that you propose.
     a software system that includes a test suite. In addition to implementing Java classes and methods that provide the
     main functionality, you will, as part of this project, also write tests that assess the correctness of the
     aforementioned methods. If your team picks this project, you should submit programs and test suites in
-    addition to a report that explains your approach to software testing.
+    addition to a report that explains your approach to software testing. To learn more about his topic, please review
+    Section 1.9 of the textbook.
 
-  \item {\bf Computer Music}: Potentially leveraging existing computer music libraries, such as JFugue, this project
-    invites students to implement a Java program that can create and play music. After learning about the Java classes
-    and methods provided by a library like JFugue, students selecting this project should write Java programs that can
-    generate musical instrument digital interface (MIDI) files. After creating a MIDI file, you can use Ubuntu's {\tt
-      timidity} program to play the sound on a computer. In addition to implementing the required Java programs, this
-    project requires you to write a report that explains how JFugue works and gives both a technical and a musical
-    commentary on the music your programs generate.
+  \item {\bf Searching and Sorting}: This topic invites you to either investigate a data structure that we did not already
+    study this semester or, alternatively, further look into a data structure that we previously discussed. A team that
+    selects this project might review the textbook's content about a specific data structure (e.g., Chapter 6's
+    discussion of stacks, queues, and double-ended queues) and then identify one area for further study. For instance,
+    you could decide to implement and test your own version of these data types that is ``backed'' by a dynamic array.
+    Alternatively, you could use as an inspiration some of the guidelines in Chapter 7 and implement your own dynamic
+    array that can both grow and shrink in size.
 
   \item {\bf Student-Designed Project}: Students will develop an idea for their own project that focuses on one or more
     real-world topics in the field of computer science. After receiving the course instructor's approval for your idea,
